@@ -1,0 +1,5992 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>EVO亦维自动化运维管理平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="styles/bootstrap.css" rel="stylesheet">
+    <link href="styles/jquery.tocify.css" rel="stylesheet">
+    <link href="styles/prettify.css" type="text/css" rel="stylesheet" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    
+<STYLE>html,body{height:100%;}body{padding:20px;margin:0;font:12px/1.8 "microsoft yahei","Courier New",sans-serif,verdana,arial,helvetica;background:#fff;color:#222;}div,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,from,p,img{padding:0;margin:0}ol {list-style-type:decimal;list-style-image:none;list-style-position:inside}ul {list-style-type:square;list-style-image:square;list-style-position:inside}h1{font-size:20px;color:#666;font-family:"microsoft yahei"}h2{font-size:16px;color:#000;font-family:"microsoft yahei";font-weight:normal;height:35px}h3{font-size:14px;color:#000;font-family:"microsoft yahei"}h4{font-size:12px;color:#8f1d1f;font-family:"microsoft yahei"}h5{font-size:12px;color:#436372;font-family:"microsoft yahei"}h6{font-size:12px;color:#7e5748;font-family:"microsoft yahei"}a img {border:none}a:link {font-family:courier new;color:#666;text-decoration:none}a:visited {color:#666;text-decoration:none}a:hover {text-decoration:underline}a:active {text-decoration:underline}::selection{background-color:#f9f9f9;color:#666;}::-moz-selection{background-color:#1ca999;color:#fff;}table{width:100%;border-collapse:collapse;background:#fff;margin:15px auto;font-size:12px;color:#000}table th{background:#f9f9f9;color:#888;text-align:center}table th,table td{border:1px solid #eee;line-height:28px}table td{text-align:left;padding:2px 3px}table tr:hover{background:#fafafa}hr{height:1px;border-width:0;color:#3872b1;background-color:gray}</STYLE>
+
+  </head>
+
+  <body>
+<a href="#" target="_self" id="fork-me"><img style="position: fixed;top: 0; right: 0; border: 0;z-index:999999;" src="images/forkme_right_white_ffffff.png" alt="Fork me on GitHub" alt="Fork me on GitHub"></a>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div id="toc">
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="hero-unit">
+<H1>简介</H1>
+<P>
+<HR>
+
+<P></P>
+<P>&nbsp;</P>
+<H2>1. 平台登陆</H2>
+<P>&nbsp;</P>
+<P>通过浏览器访问EVO平台。访问地址通常为：<FONT color=#0000ff><A href="http://EVOSV/evo_web" 
+target=_blank>http://EVOSV/evo_web</A></FONT> </P>
+<P></P>
+<P>其中EVOSV 是您的 <U>EVO核心服务器 </U>IP地址和端口。</P>
+<P>&nbsp;</P>
+<H2>2. 本文档的范围</H2>
+<P>以下功能地图中的黑色字体显示了本文档所涉及的主要功能范围：</P>
+<P>&nbsp;</P>
+<P>资源：</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD>
+      <P align=center><!--WizRtf2Html Charset=0  --><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><FONT 
+      color=#c0c0c0>数据中心</FONT></SPAN></P></TD>
+    <TD><!--WizRtf2Html Charset=0  -->
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><IMG border=0 
+      hspace=0 alt="" align=baseline 
+      src="images/33x33os.png"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">操作系统</SPAN> 
+    </DIV></TD>
+    <TD><!--WizRtf2Html Charset=0  -->
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><IMG border=0 
+      hspace=0 alt="" align=baseline 
+      src="images/33x33app.png"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">应用系统</SPAN> 
+    </DIV></TD>
+    <TD>
+      <DIV align=center><!--WizRtf2Html Charset=0  --><FONT color=#c0c0c0><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">基础软件</SPAN> 
+      </FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><FONT color=#c0c0c0>宿主机</FONT></P></TD>
+    <TD>
+      <DIV align=center><IMG border=0 hspace=0 alt="" align=baseline 
+      src="images/33x33script.png"></DIV>
+      <DIV align=center>脚本管理</DIV></TD>
+    <TD>
+      <DIV align=center><IMG border=0 hspace=0 alt="" align=baseline 
+      src="images/33x33net.png"></DIV>
+      <DIV align=center>网络设备</DIV></TD>
+    <TD><!--WizRtf2Html Charset=0  -->
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><FONT 
+      color=#c0c0c0>网络设备脚本</FONT></SPAN> </DIV></TD></TR>
+  <TR>
+    <TD><!--WizRtf2Html Charset=0  -->
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><FONT 
+      color=#c0c0c0>网络设备驱动</FONT></SPAN></DIV></TD>
+    <TD>
+      <DIV align=center><!--WizRtf2Html Charset=0  --><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><FONT 
+      color=#c0c0c0>文件库</FONT></SPAN></DIV></TD>
+    <TD>
+      <DIV align=center><!--WizRtf2Html Charset=0  --><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><FONT 
+      color=#c0c0c0>知识库</FONT></SPAN></DIV></TD>
+    <TD>
+      <DIV align=center>&nbsp;</DIV></TD></TR></TBODY></TABLE></P>
+<P align=left>服务：</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TD><!--WizRtf2Html Charset=0  -->
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><IMG border=0 
+      hspace=0 alt="" align=baseline 
+      src="images/33x33home.png"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">平台首页</SPAN> 
+    </DIV></TD>
+    <TD><!--WizRtf2Html Charset=0  -->
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><IMG border=0 
+      hspace=0 alt="" align=baseline 
+      src="images/33x33job.png"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">作业服务</SPAN> 
+    </DIV></TD>
+    <TD><!--WizRtf2Html Charset=0  -->
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><IMG border=0 
+      hspace=0 alt="" align=baseline 
+      src="images/33x33sysservice.png"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">系统服务</SPAN> 
+    </DIV></TD>
+    <TD>
+      <DIV align=center><!--WizRtf2Html Charset=0  --><FONT color=#c0c0c0><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">告警中心</SPAN>&nbsp;&nbsp;&nbsp;&nbsp;</FONT></DIV></TD></TR>
+  <TR>
+    <TD><!--WizRtf2Html Charset=0  -->
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><IMG border=0 
+      hspace=0 alt="" align=baseline 
+      src="images/33x33resource.png"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">资源中心</SPAN> 
+    </DIV></TD>
+    <TD><!--WizRtf2Html Charset=0  -->
+      <P align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><IMG border=0 
+      hspace=0 alt="" align=baseline 
+      src="images/33x33healthchk.png"></SPAN></P>
+      <P align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">巡检服务</SPAN> </P></TD>
+    <TD><!--WizRtf2Html Charset=0  -->
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><IMG border=0 
+      hspace=0 alt="" align=baseline 
+      src="images/33x33cm.png"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">配置管理</SPAN> 
+    </DIV></TD>
+    <TD>
+      <P align=center><!--WizRtf2Html Charset=0  --><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><FONT 
+      color=#c0c0c0>Oracle 故障诊断</FONT></SPAN></P>
+      <DIV align=center></DIV></TD></TR>
+  <TR>
+    <TD><!--WizRtf2Html Charset=0  -->
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><IMG border=0 
+      hspace=0 alt="" align=baseline 
+      src="images/33x33user.png"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">个人中心</SPAN> 
+    </DIV></TD>
+    <TD><!--WizRtf2Html Charset=0  -->
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><IMG border=0 
+      hspace=0 alt="" align=baseline 
+      src="images/33x33rpm.png"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">应用发布</SPAN> 
+    </DIV></TD>
+    <TD>
+      <P align=center><!--WizRtf2Html Charset=0  --><FONT color=#c0c0c0><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">报表服务</SPAN></FONT></P></TD>
+    <TD>
+      <P align=center><!--WizRtf2Html Charset=0  --><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><FONT 
+      color=#c0c0c0>Oracle SQL审核</FONT></SPAN></P>
+      <DIV align=center></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">服务中心</SPAN> 
+    </DIV></TD>
+    <TD>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><IMG border=0 
+      hspace=0 alt="" align=baseline 
+      src="images/33x33osins.png"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">裸机安装</SPAN> 
+    </DIV></TD>
+    <TD>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><IMG border=0 
+      hspace=0 alt="" align=baseline 
+      src="images/33x33logchk.png"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">审计日志</SPAN></DIV></TD>
+    <TD><!--WizRtf2Html Charset=0  -->
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt"><IMG border=0 
+      hspace=0 alt="" align=baseline 
+      src="images/33x33softins.png"></SPAN></DIV>
+      <DIV align=center><SPAN 
+      style="FONT-FAMILY: 'Microsoft YaHei'; FONT-SIZE: 9pt">软件部署</SPAN> 
+    </DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><FONT color=#c0c0c0>网络设备作业</FONT></P></TD>
+    <TD></TD>
+    <TD></TD></TR></TBODY></TABLE></P>
+
+<H1>1.1 首页 
+<P>
+<HR>
+</H1>
+<P>EVO的首页即Dashboard模块，通过直观的图表展示当前用户相关的资源及作业统计信息。 
+<P>
+<P>以下示例显示了常见的可选图表组件： </P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>名称</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>操作系统.饼图</DIV></TD>
+    <TD>
+      <DIV>当前处于正常、脱管、关闭的操作系统数量及其占比</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>操作系统.折线图</DIV></DIV></TD>
+    <TD>
+      <DIV>按月累加的最近12个月处于正常、脱管、关闭的操作系统数量及其趋势</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>脚本.饼图</DIV></TD>
+    <TD>
+      <DIV>当前处于可用、不可用、待审核、已拒绝的脚本数量及其占比</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>脚本.柱状图</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>按月累加的最近12个月处于可用、不可用、待审核、已拒绝的脚本数量及其趋势</DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>计划作业.饼图</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>当前处未开始、可执行、待审核、已拒绝、执行中、完成、停止的计划作业数量及其占比</DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>计划作业.柱状图</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>按月累加的最近12个月处于未开始、可执行、待审核、已拒绝、执行中、完成、停止的计划作业数量及其趋势</DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>告警.饼图</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>当前处于严重、主要、次要的（巡检）告警数量及其占比</DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>告警.折线图</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>按日累加的最近30天处于严重、主要、次要的（巡检）告警数量及其趋势</DIV></DIV></TD></TR></TBODY></TABLE></IMG></IMG></IMG></IMG></P>
+<P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3687.png"></P>
+<P>&nbsp;</P>
+
+<H1>1.2 用户和权限</H1>
+<P>
+<P>
+<HR>
+通过用户、角色、设备域及具体操作权限设定，对用户权限进行设置，其中角色为操作权限的集合，将角色授予用户，用户便具有相应权限。结合设备域的分类设定，将授权控制到满足操作需求的最小范围，防止过度授权造成潜在风险。 
+
+<P></P>
+<P>&nbsp;</P>
+<H2>1. 用户管理</H2>
+<P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>登陆用户</DIV></TD>
+    <TD>登陆平台所使用的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>用户名</DIV></TD>
+    <TD>登陆用户别名，一般为用户姓名</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>所属角色</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>该用户所属的角色列表</DIV></IMG></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>手机</DIV></TD>
+    <TD>
+      <DIV>手机号码</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>激活状态</DIV></TD>
+    <TD>用户的激活状态</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>
+      <DIV>用户的创建时间</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>创建人</DIV></DIV></TD>
+    <TD>
+      <DIV>创建者的用户名</DIV></TD></TR></TBODY></TABLE></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>创建</DIV></TD>
+    <TD>
+      <DIV>创建用户</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>删除</DIV></TD>
+    <TD>
+      <DIV>删除用户</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>修改密码</DIV></DIV></TD>
+    <TD>
+      <DIV>（用户自助）修改用户密码</IMG></IMG></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>重置密码</DIV></TD>
+    <TD>
+      <DIV>管理员修改用户密码</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>编辑</DIV></TD>
+    <TD>
+      <DIV>编辑用户信息</DIV></TD></TR></TBODY></TABLE></P>
+<P></IMG></P>
+<P>
+<P>&nbsp;</P>
+<H2>2. 角色管理</H2>
+<P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>角色名称</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>角色名称</DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>管理员</DIV></TD>
+    <TD>
+      <DIV>是否为管理员</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>类型</DIV></DIV></TD>
+    <TD>
+      <DIV>相同权限、主备权限，目前没有实际用途</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>描述</DIV></TD>
+    <TD>
+      <DIV>角色的描述信息</DIV></TD></TR></TBODY></TABLE></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>创建</DIV></TD>
+    <TD>
+      <DIV>创建角色</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>删除</DIV></TD>
+    <TD>
+      <DIV>删除角色</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>权限设置</DIV></TD>
+    <TD>
+      <DIV>管理角色对应的权限</DIV>
+      <DIV><IMG border=0 
+      src="images/exclamation2.png"></IMG>&nbsp;此版本EVO对应的权限根据菜单、按钮、设备组、脚本组进行授权</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>成员管理</DIV></TD>
+    <TD>
+      <DIV>管理角色的成员：</DIV>
+      <UL>
+        <LI>添加成员，将该角色对应的权限授予所选用户 
+        <LI>移除成员，将该角色对应的权限从所选用户移除 
+        <LI>设置日期，将该角色对应的权限授予所选用户的时间段</LI></UL></TD></TR></TBODY></TABLE></P>
+<P></P>
+<P>
+<P></IMG>
+<P>
+<P>&nbsp;</P>
+
+
+<H1>2&nbsp;服务中心</H1>
+<P>
+<P>
+<HR>
+
+<P></P>
+<P>EVO整体由数个服务模块构成，这些服务集中显示于服务中心。根据用户权限的不同，所包含的服务模块和功能数量会有所不同。</P>
+<P>&nbsp;</P>
+<P><IMG border=0 
+src="images/230017b48b44205dc54d4057b3548c8d.png"></IMG>&nbsp;本文档所使用的截图大部分为管理员视角，根据用户权限的不同，界面显示可能会存在差异。</P>
+<P>&nbsp;</P>
+<P>部分服务模块由于较为常用，因此在界面展示上将其上升至与服务中心相同的级别，这些服务我们将其称为一级服务或顶级服务，包括首页、个人中心、资源中心等。</P>
+<P>&nbsp;</P>
+<H2>2.0.1 服务类型</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=118>
+      <DIV>服务类型</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV align=center><IMG border=0 hspace=0 alt="" align=baseline 
+      src="images/c582b65cfb1171663c51435d63c2e291.png"></DIV>
+      <DIV align=center><FONT color=#4a4a4a>首页</FONT></DIV></TD>
+    <TD>
+      <P>首页即Dashboard模块，通过直观的图表展示当前用户相关的资源及服务统计信息。 （一级服务）</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline 
+src="images/807fd7f87f40f80941e08a24773b41bf.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>个人中心</FONT></DIV></TD>
+    <TD>用户的待处理事务的管理中心。（一级服务）</TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline 
+      src="images/c1baf1de3a17eb94fb88e5252f3e552e.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>资源中心</FONT></DIV></TD>
+    <TD>显示用户所管理的资源。（一级服务）</TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline src="images/c142919ded2337931214dab05d930fec.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>配置管理</FONT></DIV></TD>
+    <TD>
+      <DIV>对应于CMDB的配置信息管理模块。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline src="images/7edc57234847b3c1ecb903bf0e807946.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>作业服务</FONT></DIV></TD>
+    <TD>针对服务器自动化的作业运行与作业管理模块。</TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline 
+      src="images/ac028c58e7fd30e00a62ff4731277061.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>巡检服务</FONT></DIV></TD>
+    <TD>
+      <DIV>巡检项和巡检模板的定制模块，支持用户自定义，内置若干巡检模板。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline 
+      src="images/a3576d84fb4f89fc62cbe3cf0765f637.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>软件部署</FONT></DIV></TD>
+    <TD>软件安装、配置和卸载功能的定制模块，支持用户自定义，内置若干商业软件的安装、配置和卸载模板。</TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline src="images/c4a746461dd4281f96f857f11d5c5847.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>应用发布</FONT></DIV></TD>
+    <TD>
+      <DIV>应用程序持续发布的支持模块。包括流程编辑器、流程管理、动态运行过程展示和控制界面。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline 
+      src="images/4b6074988fa76090f19165e3a8deb95b.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>系统服务</FONT></DIV></TD>
+    <TD>
+      <DIV>脚本、SOP服务化封装模块，通过封装提升易用性、实现作业流程标准化。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline 
+      src="images/c1f10ffab230cb6d809532e8c6d34598.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>审计日志</FONT></DIV></TD>
+    <TD>
+      <DIV>集中存放平台中的安全事件、用户访问记录、运行日志、运行状态等各类信息供用户检索。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline 
+      src="images/233813b1c3459beb1fc131e92a4c389b.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>裸机安装</FONT></DIV></TD>
+    <TD>
+      <DIV>X86 PC Server裸机自动化装机与管理模块。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline 
+      src="images/33x33netjob.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>网络.作业服务</FONT></DIV></TD>
+    <TD>针对网络自动化的作业运行与作业管理模块。</TD></TR></TBODY></TABLE></P>
+<P></P>
+<P></P>
+<P></P>
+<P>&nbsp;</P>
+
+
+
+
+<H1>
+<P></IMG>2.1&nbsp;资源中心</P></H1>
+<P>
+<HR>
+
+<H2>1. 资源类型</H2>
+<P>根据用户的权限，资源中心显示用户所管理的资源，EVO的资源目前包括以下类型：</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=118>
+      <DIV>资源类型</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline src="images/840da801e2d1f2028f390d761134d502.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>操作系统</FONT></DIV></TD>
+    <TD>
+      <P>操作系统维度的运维对象管理入口。用户可以通过该模块以特定协议建立与操作系统的连接。EVO提供Agent与Agentless两种方式供用户选择。</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline src="images/5c237c6661e968655f1760067f709612.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>应用系统</FONT></DIV></TD>
+    <TD>
+      <P>应用系统维度的运维对象管理入口。</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline 
+src="images/33x33host.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>宿主机</FONT></DIV></TD>
+    <TD>基于虚拟化技术，同时运行多个操作系统的主机，包括VIOS主机、ESXi主机、KVM主机等。</TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><IMG border=0 hspace=0 alt="" align=baseline 
+      src="images/0a213473e6a7cf1ecaeadbdd431f51a2.png">&nbsp;</DIV>
+      <DIV align=center>脚本</DIV></TD>
+    <TD>
+      <P>对脚本资源的管理模块，这些脚本通常能够运行在操作系统环境下，但也包括部分特殊类型（如SQL），提供基于Web的脚本编辑（增删改查）、版本管理、导入导出功能。</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline src="images/565b2ec3ee3c64d8960837956d0e1752.png"></FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>网络设备</FONT></DIV></TD>
+    <TD>
+      <DIV>针对网络设备的管理入口，包括交换机、负载均衡器、防火墙等网络设备对象。EVO通过Agentless方式纳管网络设备。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline 
+      src="images/33x33netscript.png">&nbsp;</FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>网络设备脚本</FONT></DIV></TD>
+    <TD>
+      <DIV>适用于网络设备脚本资源的管理模块。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center><FONT color=#4a4a4a><IMG border=0 hspace=0 alt="" 
+      align=baseline 
+      src="images/33x33netdriver.png">&nbsp;</FONT></DIV>
+      <DIV align=center><FONT color=#4a4a4a>网络设备驱动</FONT></DIV></TD>
+    <TD>
+      <DIV>适用于网络设备驱动资源的管理模块。</DIV></TD></TR></TBODY></TABLE></P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3689.png"></P>
+<P>&nbsp;</P>
+<H2>2. 资源对象快速检索</H2>
+<P>通过输入资源特征快速找到管理对象。</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+
+
+
+<H1>2.1.1 操作系统纳管 
+<P>
+<HR>
+</H1>
+<P></P>
+<H2>1. 简介 </H2>
+<P>操作系统纳管部分通过统一不同系统平台主机资源的管理视图，从而使批量自动化、流程自动化、健康巡检等自动化运维管理功能具有统一的入口。 </P>
+<DIV>
+<P>&nbsp;</P>
+<P>EVO的操作系统纳管功能包括Agent和Agentless两种模式。具体如下：</P>
+<P>&nbsp;</P>
+<P>注：下表所指root和administrator用户，包括相同权限的其他用户或修改用户名后的administrator用户。</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=118>
+      <DIV>操作系统类型</DIV></TH>
+    <TH>
+      <DIV>Agent root/administrator </DIV></TH>
+    <TH>
+      <DIV>Agent非root/非administrator </DIV></TH>
+    <TH>
+      <DIV>
+      <DIV>Agentless 密码方式</DIV></DIV></TH>
+    <TH>
+      <DIV>
+      <DIV>Agentless 密钥方式</DIV></DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>AIX</DIV></TD>
+    <TD>
+      <UL>
+        <LI>root 用户名+密码 
+        <LI><FONT color=#808080>修改密码不影响纳管状态</FONT></LI></UL></TD>
+    <TD>
+      <DIV>
+      <LI>非root 用户名+密码 
+      <LI><FONT color=#808080>修改密码不影响纳管状态</FONT> 
+      <LI><FONT color=#0A5DA1>不能使用全部功能，不推荐使用</FONT></LI></DIV></TD>
+    <TD>
+      <DIV>
+      <LI>用户名+密码 
+      <LI><FONT color=#0A5DA1>密码修改则脱管</FONT></LI></DIV></TD>
+    <TD>
+      <UL>
+        <LI>用户名+密码+公钥+私钥及其密码</LI></UL>
+      <LI><FONT color=#808080>修改密码不影响纳管状态</FONT></LI></TD>
+    <TD>
+      <DIV><IMG border=0 
+      src="images/230017b48b44205dc54d4057b3548c8d.png"></DIV>
+      <DIV>密钥对可于任意</DIV>
+      <DIV>生成器生成</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>HP-UX</DIV></TD>
+    <TD>
+      <DIV>
+      <LI>root 用户名+密码 
+      <LI><FONT color=#808080>修改密码不影响纳管状态</FONT></LI></DIV></TD>
+    <TD>
+      <DIV>
+      <LI>非root 用户名+密码 
+      <LI><FONT color=#808080>修改密码不影响纳管状态</FONT> 
+      <LI><FONT color=#0A5DA1>不能使用全部功能，不推荐使用</FONT></LI></DIV></TD>
+    <TD>
+      <DIV>
+      <LI>用户名+密码 
+      <LI><FONT color=#0A5DA1>密码修改则脱管</FONT></LI></DIV></TD>
+    <TD>
+      <DIV>
+      <UL>
+        <LI>用户名+密码+公钥+私钥及其密码 
+        <LI><FONT color=#808080>修改密码不影响纳管状态</FONT></LI></UL></DIV></TD>
+    <TD>
+      <DIV>同上</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>Linux</DIV></TD>
+    <TD>
+      <DIV>
+      <LI>root 用户名+密码 
+      <LI><FONT color=#808080>修改密码不影响纳管状态</FONT></LI></DIV></TD>
+    <TD>
+      <DIV>
+      <LI>非root 用户名+密码 
+      <LI><FONT color=#808080>修改密码不影响纳管状态</FONT> 
+      <LI><FONT color=#0A5DA1>不能使用全部功能，不推荐使用</FONT></LI></DIV></TD>
+    <TD>
+      <DIV>
+      <LI>用户名+密码 
+      <LI><FONT color=#0A5DA1>密码修改则脱管</FONT></LI></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>
+      <UL>
+        <LI>用户名+密码+公钥+私钥及其密码 
+        <LI><FONT color=#808080>修改密码不影响纳管状态</FONT></LI></UL></DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>同上</DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>Windows</DIV></TD>
+    <TD>
+      <DIV>
+      <LI>administrator 用户名+密码 
+      <LI><FONT color=#808080>修改密码不影响纳管状态</FONT></LI></DIV></TD>
+    <TD>
+      <DIV>
+      <LI>非root 用户名+密码 
+      <LI><FONT color=#808080>修改密码不影响纳管状态</FONT> 
+      <LI><FONT color=#0A5DA1>不能使用全部功能，不推荐使用</FONT></LI></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>
+      <LI>用户名+密码 
+      <LI><FONT color=#0A5DA1>密码修改则脱管</FONT></LI></DIV></DIV></TD>
+    <TD>（需配置OpenSSH Server，本版本不支持）</TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<P>EVO支持对主机进行批量的纳管。支持AIX、Linux、Windows及HP-UX主机的纳管。</P>
+<P></P>
+<P>&nbsp;</P>
+<P>纳入EVO管理周期的主机称为<STRONG>EVO被管主机</STRONG>，只有当主机成为EVO被管主机时,才可通过EVO平台在主机上进行批量和编排作业。纳管的整体流程如下:</P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3496.png"></P>
+<P>&nbsp;</P></DIV>
+<H2>2. 扫描</H2>
+<P>点击【纳管】按钮进入操作系统纳管页面，输入扫描信息后点击【扫描】即可开始操作系统扫描过程。</P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3705.png"></P>
+<P>&nbsp;</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>填写说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>扫描类型</DIV></TD>
+    <TD>支持批量扫描和单个IP扫描</TD></TR>
+  <TR>
+    <TD>
+      <DIV>From</DIV></TD>
+    <TD>扫描的起始IP或待扫描的IP</TD></TR>
+  <TR>
+    <TD>
+      <DIV>To</DIV></TD>
+    <TD>
+      <DIV>扫描的截至IP</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>SSH端口</DIV></TD>
+    <TD>
+      <DIV>默认为22</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>Agent端口</DIV></TD>
+    <TD>
+      <DIV>使用默认即可，一般为12010</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>扫描Windows</DIV></TD>
+    <TD>
+      <DIV>是则同时扫描针对Windows主机的端口，否则不扫描</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>WinRM</DIV></TD>
+    <TD>
+      <DIV>默认5985（HTTP）、5986(HTTPS）</DIV></TD></TR></TBODY></TABLE></P>
+<DIV></DIV>
+<P></P>
+<H2>3. <A name=扫描结果查看>扫描结果查看</A></H2>
+<P>
+<HR>
+
+<P></P>
+<P></P>
+<P>扫描后将得到获得主机状态列表，其中各项信息的说明如下： 
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>状态</DIV></TD>
+    <TD>
+      <P>扫描成功：正常扫描完成</P>
+      <P>扫描失败：端口无消息返回</P>
+      <P>已纳管：设备已经被纳管</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>SSH</DIV></TD>
+    <TD>
+      <P>可用：SSH可用</P>
+      <P>不可用：SSH不可用<STRONG>，指的是EVOPB与主机间的网络连通状态，下同</STRONG></P>
+      <P>未检测：未进行检测，针对已纳管的设备</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>消息</DIV></TD>
+    <TD>
+      <DIV>
+      <P>可用：端口可用</P>
+      <P>不可用：端口不可用</P>
+      <P>未检测：未进行检测，针对已纳管的设备</P></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>WMI</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>
+      <DIV>
+      <P>可用：端口可用</P>
+      <P>不可用：端口不可用</P>
+      <P>未检测：未进行检测</P></DIV></DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>WinRM</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>
+      <P>可用：端口可用</P>
+      <P>不可用：端口不可用</P>
+      <P>未检测：未进行检测</P></DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>扫描或纳管结果</DIV></TD>
+    <TD>
+      <DIV>host unreachable：设备无法连接</DIV>
+      <DIV>Has been manage IP， don't scan: 设备已经纳管</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>操作</DIV></TD>
+    <TD>
+      <DIV>部署Agent</DIV>
+      <DIV>注册</DIV>
+      <DIV>Agentless纳管</DIV>
+      <DIV>部署</DIV>
+      <DIV>扫描</DIV></TD></TR></TBODY></TABLE></P>
+<H2>4. <A name=纳管或注册>纳管或注册</A></H2>
+<P>
+<HR>
+
+<P></P>
+<P>操作系统纳管的前提为扫描成功且端口可用（包括SSH端口和Agent的消息端口）的设备进行纳管。</P>
+<P>EVO提供了5种纳管方式方便用户进行操作系统纳管操作，包括单个操作系统纳管、多个设备统一密码纳管、多个设备差异化密码纳管、导入用户名及密码清单纳管，以及注册方式。</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>纳管方式</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>单个操作系统纳管</DIV></TD>
+    <TD>
+      <P>用于单个主机纳管。</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>多个设备统</DIV>
+      <DIV>一密码纳管</DIV></TD>
+    <TD>
+      <P>指多个主机部署Agent的用户名和密码相同时，可通过统一输入用户名和密码。</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>多个设备差</DIV>
+      <DIV>异化密码纳管</DIV></TD>
+    <TD>
+      <DIV>
+      <P>多个主机部署Agent的用户名和密码各不相同时在默认的表单中输入用户名和密码进行纳管。</P></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>导入用户名</DIV>
+      <DIV>密码清单纳管</DIV></TD>
+    <TD>
+      <DIV>可将用户名和密码以csv格式进行存储，从而批量导入免去手工分别输入步骤。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>注册</DIV></TD>
+    <TD>
+      <DIV>适用于以下两种场景：</DIV>
+      <DIV>1、用户通过手工方式安装Agent，通过注册从而取得接入EVO平台的权限；</DIV>
+      <DIV>2、主机来源为克隆已经安装Agent的分区，可借助此方式快速纳管虚拟分区。</DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<P>
+<P></P>
+<P></P>
+<P></P>
+<P></P>
+
+
+
+<H1>2.1.2 操作系统</H1>
+<P>
+<HR>
+
+<P></P>
+<H2>1. 操作系统列表</H2>
+<P>结合EVO批量作业平台的信息收集机制，EVO可为用户提供监控级的配置信息收集、展现和查询功能。当硬件、软件等的配置属性信息发生改变时，将实时（默认5分钟内，可自定义）更新这些信息。同时可通过电子邮件、短信或监控接口将这些信息的变更通知给相关人员。</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3693.png"></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>状态</DIV></TD>
+    <TD>纳管的状态：正常或脱管</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>主机名</DIV></DIV></TD>
+    <TD>
+      <DIV>对应操作系统的主机名</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>IP地址</DIV></TD>
+    <TD>对应操作系统的IP地址</TD></TR>
+  <TR>
+    <TD>
+      <DIV>负责人</DIV></TD>
+    <TD>对应操作系统的负责人</TD></TR>
+  <TR>
+    <TD>
+      <DIV>环境用途</DIV></TD>
+    <TD>对应操作系统的环境用途</TD></TR>
+  <TR>
+    <TD>
+      <DIV>系统类型</DIV></TD>
+    <TD>
+      <DIV>对应操作系统的类型</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>系统版本</DIV></TD>
+    <TD>
+      <DIV>对应操作系统的版本（Linux指内核版本）</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>纳管时间</DIV></TD>
+    <TD>
+      <DIV>对应操作系统的纳管时间</DIV></TD></TR></TBODY></TABLE></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>纳管</DIV></TD>
+    <TD>纳管操作系统，详细参考相关章节</TD></TR>
+  <TR>
+    <TD>
+      <DIV>设备组管理</DIV></TD>
+    <TD>
+      <DIV>设置静态设备组</DIV>
+      <UL>
+        <LI>添加静态组</LI>
+        <LI>删除静态组</LI></UL>
+      <P><IMG border=0 
+      src="images/230017b48b44205dc54d4057b3548c8d.png"></IMG>&nbsp;静态组用于权限的管理</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>编辑</DIV></TD>
+    <TD>编辑操作系统的人工维护类属性信息</TD></TR>
+  <TR>
+    <TD>
+      <DIV>开启Agent</DIV></TD>
+    <TD>
+      <DIV>开启处于关闭状态的Agent</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>关闭Agent</DIV></TD>
+    <TD>
+      <DIV>关闭处于开启状态的Agent</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>设置负责人</DIV></TD>
+    <TD>
+      <DIV>设置操作系统的负责人信息</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>删除服务器</DIV></TD>
+    <TD>
+      <DIV>删除处于关闭状态的Agent</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>升级Agent</DIV></TD>
+    <TD>
+      <DIV>升级Agent版本，参考相关章节</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>导出</DIV></DIV></TD>
+    <TD>
+      <DIV>导出操作系统的配置信息</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>添加协议</DIV></DIV></TD>
+    <TD>
+      <DIV>在纳管的基础上添加连接协议，如JDBC</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>删除协议</DIV></DIV></TD>
+    <TD>
+      <DIV>删除已添加的协议</DIV></TD></TR></TBODY></TABLE></P>
+<H2>2. 操作系统详情</H2>
+<P>以更详细的方式集中展示相关的信息。</P>
+<P>这里显示的信息包含了操作系统的人工维护信息和自动维护信息。参见 <A 
+href="ca://article/?Book={F51B09E5-AABB-4658-98A6-E149F7793B38}&amp;ID=702">配置管理</A></P>
+<P>&nbsp;</P>
+<P>（1）协议管理</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>添加协议</DIV></TD>
+    <TD>
+      <P>添加该操作系统对应主机的网络访问协议，包括操作系统以及构建在该操作系统之上的各类程序的访问方式和账户。</P>
+      <P>常见的如SSH和JDBC。各类协议的添加方法请参考《<A 
+      href="ca://article/?Book={F51B09E5-AABB-4658-98A6-E149F7793B38}&amp;ID=698">附 
+      EVO的运维对象连接</A>》</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>编辑协议</DIV></TD>
+    <TD>
+      <DIV>编辑添加的协议。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>删除协议</DIV></TD>
+    <TD>删除添加的协议。</TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3690.png"></P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3691.png"></P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3692.png"></P>
+
+
+<H2>
+<H1>2.1.3 应用系统</H1></H2>
+<P>
+<HR>
+
+<P></P>
+<P>&nbsp;</P>
+<P><IMG border=0 
+src="images/230017b48b44205dc54d4057b3548c8d.png"></IMG>&nbsp;应用发布模块所使用的应用系统与此处创建的应用系统是完全对应的。</P>
+<P>&nbsp;</P>
+<H2>1. 应用系统列表</H2>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3861.png"></P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>应用系统名称</DIV></TD>
+    <TD>
+      <DIV>应用系统名称</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>应用发布人</DIV></TD>
+    <TD>
+      <DIV>该应用系统的应用发布负责人</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>设备数量</DIV></TD>
+    <TD>
+      <DIV>该应用系统关联的主机（操作系统）数量</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>描述信息</DIV></TD>
+    <TD>应用系统的描述信息</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>
+      <DIV>应用系统的创建人</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>创建日期</DIV></DIV></TD>
+    <TD>
+      <DIV>应用系统的创建时间</DIV></TD></TR></TBODY></TABLE>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>创建</DIV></TD>
+    <TD>创建应用系统</TD></TR>
+  <TR>
+    <TD>
+      <DIV>编辑</DIV></TD>
+    <TD>编辑应用系统的人工维护信息</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>删除</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>删除应用系统</DIV></DIV></TD></TR></TBODY></TABLE></P>
+<H2>2. 创建应用系统</H2>
+<P>&nbsp;</P>
+<P></P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3863.png"></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>应用系统名称</DIV></TD>
+    <TD>
+      <DIV>应用系统名称</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>标签</DIV></TD>
+    <TD>
+      <DIV>应用系统标签</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>访问地址</DIV></TD>
+    <TD>
+      <DIV>应用系统访问地址</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>响应时延(毫秒)</DIV></TD>
+    <TD>
+      <DIV>（预留）</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>监听频率</DIV>
+      <DIV>(分钟/次)</DIV></TD>
+    <TD>
+      <DIV>（预留）</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>描述信息</DIV></TD>
+    <TD>
+      <DIV>应用系统的描述信息</DIV></TD></TR></TBODY></TABLE></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>关联服务器</DIV></TD>
+    <TD>关联主机（操作系统）到该应用系统</TD></TR>
+  <TR>
+    <TD>
+      <DIV>关联人员</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>设置应用程序发布人员</DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>保存</DIV></TD>
+    <TD>保存填写的信息</TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>3. 应用系统详情</H2>
+<P>以更详细的方式集中展示相关的信息。</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3864.png"></P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<H1>2.1.4 脚本管理</H1>
+<P>
+<HR>
+
+<P></P>
+<P>脚本管理模块用于脚本资源的管理，由Web脚本编辑器、脚本版本库构成，提供包括作业脚本的创建、修改、删除、启用、停用、导出、提交审批和运行等功能。</P>
+<P>EVO对批量作业脚本具有版本管理功能，对批量作业脚本的任何修改都会记录相应的历史版本、修改时间和修改人员。</P>
+<P>&nbsp;</P>
+<H2>1. 脚本列表</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>脚本名称</DIV></TD>
+    <TD>支持中文和英文</TD></TR>
+  <TR>
+    <TD>
+      <DIV>类型</DIV></TD>
+    <TD>
+      <DIV>选择项。可选范围由管理员定义</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>描述</DIV></TD>
+    <TD>
+      <DIV>无特殊要求</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>状态</DIV></TD>
+    <TD>
+      <DIV>脚本的状态</DIV>
+      <DIV>
+      <P>可用：经审批的脚本状态</P>
+      <P>不可用：未经审批的脚本状态</P></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>
+      <DIV>脚本的创建人</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建日期</DIV></TD>
+    <TD>
+      <DIV>脚本的创建日期</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>版本</DIV></TD>
+    <TD>
+      <DIV>脚本的版本</DIV></TD></TR></TBODY></TABLE></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>创建</DIV></TD>
+    <TD>
+      <DIV>创建脚本</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>脚本文件夹管理</DIV></TD>
+    <TD>
+      <DIV>设置脚本的分类目录</DIV>
+      <UL>
+        <LI>添加 
+        <LI>编辑 
+        <LI>删除</LI></UL></TD></TR>
+  <TR>
+    <TD>
+      <DIV>删除</DIV></TD>
+    <TD>
+      <DIV>删除脚本</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>启用</DIV></DIV></TD>
+    <TD>
+      <DIV></IMG></IMG>启用脚本，仅测试时使用，一般情况下通过审批流程定时为指定用户启用脚本</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>停用</DIV></TD>
+    <TD>
+      <DIV>停用脚本</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>导入</DIV></TD>
+    <TD>
+      <DIV>通过外部文件导入脚本到脚本库</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>导出</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>导出脚本</DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行</DIV></TD>
+    <TD>
+      <DIV>创建一个执行脚本的作业</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>修改</DIV></TD>
+    <TD>
+      <DIV>修改脚本</DIV></TD></TR>
+  <TR>
+    <TD>提交</TD>
+    <TD>新建或编辑脚本后，提交审批人员进行审批</TD></TR></TBODY></TABLE></P>
+<H2>2. 创建脚本</H2>
+<P>通过【创建】按钮进入脚本编辑器页面，填写如下信息即可完成一个脚本的创建。</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3695.png"></P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3697.png"></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>脚本名称</DIV></TD>
+    <TD>支持中文和英文</TD></TR>
+  <TR>
+    <TD>
+      <DIV>脚本类型</DIV></TD>
+    <TD>
+      <DIV>选择项。可选范围由管理员定义</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>脚本路径</DIV></TD>
+    <TD>
+      <DIV>选择项。选择范围由管理员定义。脚本类型在树形菜单结构中的相对位置</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>脚本附件</DIV></TD>
+    <TD>
+      <DIV>指定一个位于服务层的文件伴随脚本下发到目标主机，目标路径与脚本在目标主机上的路径相同</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>功能描述</DIV></TD>
+    <TD>
+      <DIV>无特殊要求</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>语言类型</DIV></TD>
+    <TD>脚本语言类型</TD></TR>
+  <TR>
+    <TD>
+      <DIV>脚本内容</DIV></TD>
+    <TD>
+      <DIV>EVO要求所运行的脚本为<STRONG>非交互式</STRONG>脚本，除此之外没有特殊的要求</DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>3. 脚本详情</H2>
+<P>集中展示该脚本相关的信息。</P>
+<P>
+<H1>2.2 作业服务</H1>
+<DIV><FONT color=#008080>
+<HR>
+</FONT></DIV>
+<DIV>
+<DIV>
+<DIV>&nbsp;</DIV>
+<DIV><FONT color=#003300>支持原生Shell、Python、Perl、Bat、PowerShell等Agent端具备语言环境的编程语言。 
+</FONT></DIV>
+<DIV><FONT color=#003300>支持通过JDBC协议执行SQL。</FONT></DIV>
+<DIV><FONT color=#003300>能够以多种方式（即时、定时、计划）执行非交互批量脚本。 </FONT></DIV>
+<DIV><FONT color=#003300>实时查看作业日志。</FONT></DIV>
+<DIV><FONT color=#003300>结果可导出为Excel报表。</FONT> </DIV></DIV></DIV>
+<DIV>&nbsp;</DIV>
+<H2>1. 作业的发起</H2>
+<P>作业的发起方式有两种，一是从作业脚本资源处发起，另一种是从作业服务模块发起。</P>
+<P>1、从资源中心-脚本发起服务，点击<IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL2054.png">（运行）按钮创建一个作业：</P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3411.png"></P>
+<P>&nbsp;</P>
+<P>2、通过作业服务模块创建，填写以下信息后点击保存即可创建一个作业。</P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3699.png"></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>执行脚本</DIV></TD>
+    <TD>该作业所使用脚本的名称。可选择的脚本为脚本资源中登陆用户具备执行权限的脚本。</TD></TR>
+  <TR>
+    <TD>
+      <DIV>脚本参数</DIV></TD>
+    <TD>
+      <P>参数名和参数值对应脚本位置参数。参数名为位置参数的别名，即第1个参数对应$1，第2个参数对应$2，以此类推。当无需区分时可将所有参数放到第1个参数位，在脚本中使用$@、$*等方式进行调用。</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>选择服务器</DIV></TD>
+    <TD>
+      <DIV>从纳管的操作系统中选择主机</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行设置</DIV></TD>
+    <TD>
+      <P>立即执行：审批通过后登陆用户可立即启动的作业。</P>
+      <P>重复执行：审批通过后按计划启动的周期性作业。</P>
+      <P>定时执行：审批通过后到点启动的一次性作业。</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>设置超时时间</DIV></TD>
+    <TD>
+      <DIV>默认为60分钟</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>输出结果大小</DIV></TD>
+    <TD>默认10240KB</TD></TR></TBODY></TABLE></P>
+<P></IMG></P>
+<P>&nbsp;</P>
+<H2>2. <A name=异常处理>异常处理</A></H2>
+<P>
+<P></P>
+<P>异常包括批量作业脚本异常以及作业异常：</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>异常类型</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>脚本异常</DIV></TD>
+    <TD>
+      <P>作业正常完成，脚本的退出码为非0。</P>
+      <P>此类情况须结合具体的业务逻辑进行具体分析，EVO体系下以脚本的返回码作为作业运行状态成功与失败的区分依据，因此即时返回码非0属于正常需求，作业也将被判定为失败，但不会影响该脚本的使用。</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>作业异常</DIV></TD>
+    <TD>作业不能正常完成的情况，具体如脚本下发、结果返回过程的中通讯中断等等。</TD></TR></TBODY></TABLE></P>
+<P></IMG></IMG></P>
+<P>
+<P>
+<P></P>
+<H2>3.&nbsp;作业历史</H2>
+<P>
+<P></P>
+<H3>&nbsp;</H3>
+<H3><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3700.png"></H3>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3701.png"></P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3702.png"></P>
+<H3>1. 即时作业历史</H3>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>作业名称</DIV></TD>
+    <TD>所执行作业名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行状态</DIV></TD>
+    <TD>作业的状态</TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行用户</DIV></TD>
+    <TD>执行脚本的平台用户</TD></TR>
+  <TR>
+    <TD>
+      <DIV>开始时间</DIV></TD>
+    <TD>作业的开始时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>结束时间</DIV></TD>
+    <TD>
+      <DIV>作业的结束时间</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>失败/总数</DIV></TD>
+    <TD>
+      <DIV></IMG><IMG border=0 
+      src="images/230017b48b44205dc54d4057b3548c8d.png">&nbsp;</DIV>
+      <DIV>作业执行失败的主机数量和总的主机数量，使用返回码（exit code）进行判断。</DIV>
+      <DIV>当返回码为0时视为成功，否则为失败，因此需要根据脚本的编写特点来综合判断成功或失败的意义。</DIV></TD></TR></TBODY></TABLE></P>
+<P></P>
+<H3>2. 计划作业历史</H3>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>作业名称</DIV></TD>
+    <TD>所执行作业的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行状态</DIV></TD>
+    <TD>作业的状态</TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行用户</DIV></TD>
+    <TD>执行脚本的平台用户</TD></TR>
+  <TR>
+    <TD>
+      <DIV>开始时间</DIV></TD>
+    <TD>作业的开始时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>结束时间</DIV></TD>
+    <TD>
+      <DIV>作业的结束时间</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>最新结果</DIV></TD>
+    <TD>
+      <DIV>最后一次作业执行的成功状态</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>失败/总数</DIV></TD>
+    <TD>
+      <DIV><IMG border=0 
+      src="images/230017b48b44205dc54d4057b3548c8d.png"></IMG></DIV>
+      <DIV>作业执行失败的<STRONG>批次数量</STRONG>和总的<STRONG>批次数量</STRONG>，</DIV>
+      <DIV>每个作业使用返回码（exit 
+    code）进行判断，当返回码为0时视为成功，否则为失败，当一个批次中存在失败的作业时统计为失败。</DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>3. 作业详情</H2>
+<P>&nbsp;</P>
+<P>点击作业历史的作业名称可进入作业详情页。</P>
+<P>&nbsp;</P>
+<P><IMG border=0 
+src="images/XXXYL3865.png"></IMG> </P>
+<P>&nbsp;</P>
+<P><IMG border=0 
+src="images/XXXYL3866.png"></IMG> 
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>导出结果</DIV></TD>
+    <TD>导出已经完成的作业的日志输出到Excel</TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 hspace=0 alt="" align=baseline 
+      src="images/XXXYL3868.png"></P>
+      <P align=center>查看结果</P></TD>
+    <TD>
+      <P>查看特定作业的日志输出结果。</P>
+      <P><IMG border=0 
+      src="images/230017b48b44205dc54d4057b3548c8d.png"></P>
+      <P>特别地，当作业处于运行状态时，可动态查看最新日志输出，刷新频率为10s/次。</P></TD></TR></TBODY></TABLE>
+<P></IMG></IMG></P>
+<H1>2.3 巡检服务 
+<HR>
+</H1>
+<P></P>
+<P></P>
+<DIV>EVO内置开箱即用的基础软件健康巡检功能。通过选择巡检模板即可很容易地对选择的服务器进行一次巡检：</DIV>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3782.png"></P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3488.png"></P>
+<P>&nbsp;</P>
+<H2>1. 解析规则</H2>
+<P>
+<P></P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>属性</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <P>解析规则</P></TD>
+    <TD>
+      <P>解析规则的名称</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>规则内容</DIV></TD>
+    <TD>
+      <DIV>解析规则的内容</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>参数信息</DIV></TD>
+    <TD>
+      <DIV>参数名</DIV>
+      <DIV>参数key</DIV>
+      <DIV>类型<BR>默认值<BR>描述</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>测试输入</DIV></TD>
+    <TD>
+      <DIV>测试输入内容</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>测试结果</DIV></TD>
+    <TD>
+      <DIV>测试结果输出</DIV></TD></TR></TBODY></TABLE></P>
+<P></P>
+<P></P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>操作</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <P>保存</P></TD>
+    <TD>
+      <P>保存解析规则</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>测试</DIV></TD>
+    <TD>
+      <DIV>开始测试</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>返回</DIV></TD>
+    <TD>返回上一页</TD></TR></TBODY></TABLE></P>
+<P></P>
+<P>&nbsp;</P>
+<H2>2. 检查项</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>属性</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <P>检查项名称</P></TD>
+    <TD>
+      <P>自定义的检查项名称</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>脚本类型</DIV></TD>
+    <TD>
+      <DIV>巡检时收集数据所使用的脚本语言</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>结果类型</DIV></TD>
+    <TD>包括单值和列表两种类型</TD></TR>
+  <TR>
+    <TD>
+      <DIV>解析规则</DIV></TD>
+    <TD>
+      <DIV>巡检项对应的日志数据解析规则</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>数据表</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>巡检项对应的日志数据存储表名</DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>
+      <DIV>巡检项的创建用户</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>
+      <DIV>巡检项的创建时间</DIV></TD></TR></TBODY></TABLE></P>
+<P></P>
+<P></P>
+<P></P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>操作</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <P>编辑</P></TD>
+    <TD>
+      <P>编辑巡检项</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>删除</DIV></TD>
+    <TD>
+      <DIV>删除巡检项</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建</DIV></TD>
+    <TD>
+      <DIV>创建一个新巡检项</DIV></TD></TR></TBODY></TABLE></P>
+<P></P>
+<H2>3. 检查项创建</H2>
+<P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>属性</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <P>检查项名称</P></TD>
+    <TD>
+      <P>自定义的检查项名称</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>描述信息</DIV></DIV></TD>
+    <TD>
+      <DIV>的检查项的描述信息</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>巡检类型</DIV></TD>
+    <TD>巡检对象软件</TD></TR>
+  <TR>
+    <TD>
+      <DIV>报表分类</DIV></TD>
+    <TD>
+      <DIV>巡检报告的章节分类，一般包括配置、容量、可用性和日志</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>脚本内容</DIV></TD>
+    <TD>
+      <DIV>巡检脚本内容</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>结果类型</DIV></DIV></TD>
+    <TD>
+      <DIV>单个结果</DIV>
+      <DIV>列表</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>报表类型</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>单个结果 - 文本</DIV></DIV>
+      <DIV></DIV>
+      <DIV>
+      <DIV>列表 - 表格</DIV></DIV>
+      <DIV>
+      <DIV></DIV>
+      <DIV>
+      <DIV>列表 - 柱状图</DIV></DIV></DIV>
+      <DIV>
+      <DIV></DIV>
+      <DIV>
+      <DIV>列表 - 折线图</DIV></DIV></DIV>
+      <DIV>
+      <DIV></DIV>
+      <DIV>
+      <DIV>列表 - 饼图</DIV></DIV></DIV></TD></TR></TBODY></TABLE></P>
+<H3>解析规则</H3>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>属性</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <DIV>单个结果</DIV>
+      <DIV>解析规则</DIV></TD>
+    <TD>
+      <DIV>值类型：字符串或数字</DIV>
+      <DIV>解析规则</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>列表</DIV>
+      <DIV>解析规则</DIV></DIV></TD>
+    <TD>
+      <DIV><STRONG>解析规则</STRONG></DIV>
+      <DIV>解析规则：分行分列、表头解析数据</DIV>
+      <DIV>分行符：正则表达式表示的分行符，如以\n表示换行符</DIV>
+      <DIV>分列符：正则表达式表示的分列符，如\s+表示以若干个空白分割</DIV>
+      <DIV>开始行：0表示首行</DIV>
+      <DIV>结束行：-1表示尾行</DIV>
+      <DIV>&nbsp;</DIV>
+      <DIV></DIV>
+      <DIV><STRONG>自定义表</STRONG></DIV>
+      <DIV>表名称：存储数据的表名</DIV>
+      <DIV>属性code：英文和数字组成的数据表列名<BR>类型：文本或数字<BR>显示名称：显示在巡检报告中的数据表列名<BR>报表显示：是则在报告中显示，否则不显示<BR>图轴：当报表类型为柱状图或折线图时用于设置x和y轴使用的数据</DIV></TD></TR></TBODY></TABLE></P>
+<P>数据分行分列的目的是通过将文本结构的数据解析为固定行列的关系数据库表形式，从而方便存储和计算。</P>
+<P>以对df -hP的输出日志进行解析为例，通过观察脚本的输出可以获得一种解析的方式。</P>
+<P>&nbsp;</P>
+<P><IMG border=0 
+src="images/230017b48b44205dc54d4057b3548c8d.png"></IMG>&nbsp;相同的日志数据，解析方式并不是唯一的。</P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3796.png"></P>
+<P>&nbsp;</P>
+<P></P>
+<H3>告警规则</H3>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>属性</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <P>告警级别</P></TD>
+    <TD>
+      <P>严重告警</P>
+      <P>主要告警</P>
+      <P>次要告警</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>告警条件</DIV></TD>
+    <TD>
+      <DIV>对字符类型，适用：</DIV>
+      <DIV>==</DIV>
+      <DIV>matches</DIV>
+      <DIV>not matches</DIV>
+      <DIV>&nbsp;</DIV>
+      <DIV>对数字类型，适用：</DIV>
+      <DIV>&gt;</DIV>
+      <DIV>&gt;=</DIV>
+      <DIV>&lt;</DIV>
+      <DIV>&lt;=</DIV>
+      <DIV>==</DIV>
+      <DIV>!=</DIV>
+      <DIV>&nbsp;</DIV>
+      <DIV>可以通过逻辑与（&amp;&amp;）、逻辑或（||），以及分组符号（{}）的组合实现复杂的判断逻辑。</DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>操作符</P></TH>
+    <TH>
+      <DIV>适用</DIV></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <P>==</P></TD>
+    <TD>
+      <DIV>字符串</DIV></TD>
+    <TD>相等</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>matches</DIV></DIV></TD>
+    <TD>
+      <DIV>字符串</DIV></TD>
+    <TD>匹配</TD></TR>
+  <TR>
+    <TD>
+      <DIV>not matches</DIV></TD>
+    <TD>
+      <DIV>字符串</DIV></TD>
+    <TD>
+      <DIV>不匹配</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>&gt;</DIV></TD>
+    <TD>
+      <DIV>数字</DIV></TD>
+    <TD>
+      <DIV>大于</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>&gt;=</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>数字</DIV></DIV></TD>
+    <TD>
+      <DIV>大于或等于</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>&lt;</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>数字</DIV></DIV></TD>
+    <TD>小于</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>&lt;=</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>数字</DIV></DIV></TD>
+    <TD>
+      <DIV>小于或等于</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>==</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>数字</DIV></DIV></TD>
+    <TD>
+      <DIV>等于</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>！=</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>数字</DIV></DIV></TD>
+    <TD>不等于</TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>4. 模板列表</H2>
+<P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>属性</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <P>模板名称</P></TD>
+    <TD>
+      <P>自定义的模板名称</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>脚本类型</DIV></DIV></TD>
+    <TD>
+      <DIV>巡检时收集数据所使用的脚本语言</DIV></TD></TR>
+  <TR>
+    <TD>巡检项统计</TD>
+    <TD>该模板所包含的巡检项数量</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>
+      <DIV>模板的创建用户</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>
+      <DIV>模板的创建时间</DIV></TD></TR></TBODY></TABLE></P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>操作</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <DIV>编辑</DIV></TD>
+    <TD>
+      <DIV>编辑模板</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>复制</DIV></TD>
+    <TD>
+      <DIV>通过复制创建一个新模板</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行</DIV></TD>
+    <TD>
+      <DIV>通过该模板创建一个巡检作业</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P>删除</P></TD>
+    <TD>
+      <P>删除模板</P></TD></TR></TBODY></TABLE></P>
+<P></P>
+<P></P>
+<H2>5. 模板创建</H2>
+<P>
+<P></P>
+<P></P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>属性</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <P>模板名称</P></TD>
+    <TD>
+      <P>自定义的模板名称</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>巡检类型</DIV></TD>
+    <TD>
+      <DIV>巡检的软件对象</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>脚本类型</DIV></TD>
+    <TD>
+      <DIV>巡检时收集数据所使用的脚本语言</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>描述信息</DIV></TD>
+    <TD>
+      <DIV>模板的描述信息</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>检查项</DIV></TD>
+    <TD>
+      <DIV>从巡检项（库）中选取添加到该模板的巡检项</DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>6. 巡检类型</H2>
+<P>
+<P></P>
+<P></P>
+<P></P>
+<P>&nbsp;</P>
+<P>创建巡检项时需要选择“巡检类型”和“报表分类”。创建巡检模板时需要选择“巡检类型”，通过“巡检类型”实现巡检模板与特定类型巡检项的管理。</P>
+<P>&nbsp;</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>属性</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>类型名称</TD>
+    <TD>巡检项的分类</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>该类型的创建人用户名</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>该类型的创建时间</TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>操作</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>创建</TD>
+    <TD>创建一种类型</TD></TR>
+  <TR>
+    <TD>
+      <DIV>删除</DIV></TD>
+    <TD>删除选中类型</TD></TR>
+  <TR>
+    <TD>
+      <DIV>编辑</DIV></TD>
+    <TD>编辑该类型的信息</TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>7. 巡检类型创建</H2>
+<P>下图中的“报表分类”则决定巡检报告中的章节结构，一个“报表分类”相当于巡检报告中的章，每个章中包含多个巡检项的检查结果，即一个巡检项的结果对应一个节。</P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3872.png"></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>属性</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>类型名称</TD>
+    <TD>巡检模板的分类</TD></TR>
+  <TR>
+    <TD>
+      <DIV>报表分类</DIV></TD>
+    <TD>
+      <DIV>巡检报告中巡检结果类型</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>名称</DIV></TD>
+    <TD>
+      <DIV>具体报表分类的名称</DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>操作</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>保存</TD>
+    <TD>保存所有输入</TD></TR>
+  <TR>
+    <TD>
+      <DIV>删除</DIV></TD>
+    <TD>删除分类</TD></TR>
+  <TR>
+    <TD>
+      <DIV>上移</DIV></TD>
+    <TD>
+      <DIV>向上移动排序</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>下移</DIV></TD>
+    <TD>
+      <DIV>向下移动排序</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>添加</DIV></TD>
+    <TD>
+      <DIV>添加一个分类</DIV></TD></TR></TBODY></TABLE></P>
+<H1>2.4 软件部署</H1>
+<H2>
+<HR>
+</H2>
+<DIV>EVO内置若干开箱即用的基础软件安装、配置和卸载功能，用户可按需封装。</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>目前主要支持IBM和Oracle系列软件 <A 
+href="ca://article/?Book={F51B09E5-AABB-4658-98A6-E149F7793B38}&amp;ID=693">附 
+EVO内置的软件部署服务</A>：</DIV>
+<DIV>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>软件系列</P></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <P>IBM系</P></TD>
+    <TD>
+      <P>WAS、MQ、CICS、CTG、GPFS、HACMP、DB2</P></TD></TR>
+  <TR>
+    <TD>
+      <P>Oracle系</P></TD>
+    <TD>
+      <P>WebLogic、Oracle（RAC、单实例、PSU）</P></TD></TR>
+  <TR>
+    <TD>
+      <P>其他</P></TD>
+    <TD>
+      <P>OpenSSH</P></TD></TR></TBODY></TABLE></DIV>
+<P>关于相关参数的设置，请参考 <A 
+href="ca://article/?Book={F51B09E5-AABB-4658-98A6-E149F7793B38}&amp;ID=627">附 
+软件部署服务-安装参数列表</A>&nbsp;及<A 
+href="ca://article/?Book={F51B09E5-AABB-4658-98A6-E149F7793B38}&amp;ID=628">附 
+软件部署服务-配置参数列表</A></P>
+<P>&nbsp;</P>
+<P>在安装、配置或卸载页面，用户可以很容易地完成一个安装、配置或卸载作业过程的创建：</P>
+<P>&nbsp;</P>
+<H2>操作.软件安装</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>选择服务器</DIV></TD>
+    <TD>选择待安装软件的主机（操作系统）</TD></TR>
+  <TR>
+    <TD>
+      <DIV>选择模板</DIV></TD>
+    <TD>选择安装模板</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>选择软件</DIV></DIV></TD>
+    <TD>选择待安装的软件</TD></TR>
+  <TR>
+    <TD>
+      <DIV>选择介质库</DIV></TD>
+    <TD>选择安装使用的介质服务器</TD></TR>
+  <TR>
+    <TD>
+      <DIV>保存为模板</DIV></TD>
+    <TD>将当前设置（不包含所选主机）保存为模板以便后续选择使用</TD></TR>
+  <TR>
+    <TD>
+      <DIV>安装</DIV></TD>
+    <TD>开始安装作业</TD></TR></TBODY></TABLE></P>
+<H2><BR>操作.软件配置</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>选择服务器</DIV></TD>
+    <TD>选择待配置软件的主机（操作系统）</TD></TR>
+  <TR>
+    <TD>
+      <DIV>选择模板</DIV></TD>
+    <TD>选择配置模板</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>选择软件</DIV></DIV></TD>
+    <TD>选择待配置的软件</TD></TR>
+  <TR>
+    <TD>
+      <DIV>保存为模板</DIV></TD>
+    <TD>将当前设置（不包含所选主机）保存为模板以便后续选择使用</TD></TR>
+  <TR>
+    <TD>
+      <DIV>配置</DIV></TD>
+    <TD>开始配置作业</TD></TR></TBODY></TABLE></P>
+<H2><BR>操作.软件卸载</H2>
+<P>&nbsp;</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>选择服务器</DIV></TD>
+    <TD>选择待卸载软件的主机（操作系统）</TD></TR>
+  <TR>
+    <TD>
+      <DIV>选择模板</DIV></TD>
+    <TD>选择卸载模板</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>选择软件</DIV></DIV></TD>
+    <TD>选择待卸载的软件</TD></TR>
+  <TR>
+    <TD>
+      <DIV>保存为模板</DIV></TD>
+    <TD>将当前设置（不包含所选主机）保存为模板以便后续选择使用</TD></TR>
+  <TR>
+    <TD>
+      <DIV>卸载</DIV></TD>
+    <TD>开始卸载作业</TD></TR></TBODY></TABLE></P>
+<H2><BR>定义.软件封装</H2>
+<P>&nbsp;</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>流程类型</DIV></TD>
+    <TD>安装、配置或卸载</TD></TR>
+  <TR>
+    <TD>
+      <DIV>软件名称&nbsp;</DIV></TD>
+    <TD>软件的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>软件版本</DIV></DIV></TD>
+    <TD>软件的版本</TD></TR>
+  <TR>
+    <TD>
+      <DIV>操作系统</DIV></TD>
+    <TD>软件适用的操作系统</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>创建时间</TD></TR></TBODY></TABLE></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>自定义软件</DIV></TD>
+    <TD>创建一个模板</TD></TR>
+  <TR>
+    <TD>
+      <DIV>删除</DIV></TD>
+    <TD>删除模板</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>脚本</DIV></DIV></TD>
+    <TD>
+      <UL>
+        <LI>删除脚本 
+        <LI>上传脚本 
+        <LI>保存</LI></UL></TD></TR>
+  <TR>
+    <TD>
+      <DIV>参数</DIV></TD>
+    <TD>
+      <UL>
+        <LI>添加 
+        <LI>删除 
+        <LI>保存</LI></UL></TD></TR>
+  <TR>
+    <TD>
+      <DIV>流程</DIV></TD>
+    <TD>编辑、部署流程</TD></TR></TBODY></TABLE></P>
+<H2><BR>定义.介质库设置</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>介质库名称</DIV></TD>
+    <TD>介质库的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>类型</DIV></TD>
+    <TD>包括本地类型和NFS类型，本地类型即安装介质存放在目标主机本地文件系统</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>挂载类型</DIV></DIV></TD>
+    <TD>当介质库为NFS时需要进行远程挂载，本地文件系统则不需要此操作</TD></TR>
+  <TR>
+    <TD>
+      <DIV>版本号</DIV></TD>
+    <TD>介质库的版本号</TD></TR>
+  <TR>
+    <TD>
+      <DIV>操作系统</DIV></TD>
+    <TD>适用的操作系统类型</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>介质库的创建时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>备注</DIV></TD>
+    <TD>介质库的备注</TD></TR></TBODY></TABLE></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>自定义软件</DIV></TD>
+    <TD>创建一个介质库模板</TD></TR>
+  <TR>
+    <TD>
+      <DIV>删除</DIV></TD>
+    <TD>删除模板</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>脚本</DIV></DIV></TD>
+    <TD>
+      <UL>
+        <LI>删除脚本 
+        <LI>上传脚本 
+        <LI>保存</LI></UL></TD></TR>
+  <TR>
+    <TD>
+      <DIV>参数</DIV></TD>
+    <TD>
+      <UL>
+        <LI>添加 
+        <LI>删除 
+        <LI>保存</LI></UL></TD></TR></TBODY></TABLE></P>
+<H2><BR>汇总.安装记录</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>软件名称</DIV></TD>
+    <TD>软件的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>软件版本</DIV></DIV></TD>
+    <TD>软件的版本</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>状态</DIV></DIV></TD>
+    <TD>安装的状态，成功或失败</TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行用户</DIV></TD>
+    <TD>安装作业的平台执行用户</TD></TR>
+  <TR>
+    <TD>
+      <DIV>开始时间</DIV></TD>
+    <TD>安装开始时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>结束时间</DIV></TD>
+    <TD>安装结束时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>成功/总数</DIV></TD>
+    <TD>
+      <DIV>安装作业的成功数量、总量</DIV></TD></TR></TBODY></TABLE></P>
+<H2><BR>汇总.配置记录</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>软件名称</DIV></TD>
+    <TD>软件的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>软件版本</DIV></DIV></TD>
+    <TD>软件的版本</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>状态</DIV></DIV></TD>
+    <TD>配置的状态，成功或失败</TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行用户</DIV></TD>
+    <TD>配置作业的平台执行用户</TD></TR>
+  <TR>
+    <TD>
+      <DIV>开始时间</DIV></TD>
+    <TD>配置开始时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>结束时间</DIV></TD>
+    <TD>配置结束时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>成功/总数</DIV></TD>
+    <TD>
+      <DIV>配置作业的成功数量、总量</DIV></TD></TR></TBODY></TABLE></P>
+<H2><BR>汇总.卸载记录</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>软件名称</DIV></TD>
+    <TD>软件的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>软件版本</DIV></DIV></TD>
+    <TD>软件的版本</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>状态</DIV></DIV></TD>
+    <TD>卸载的状态，成功或失败</TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行用户</DIV></TD>
+    <TD>卸载作业的平台执行用户</TD></TR>
+  <TR>
+    <TD>
+      <DIV>开始时间</DIV></TD>
+    <TD>卸载开始时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>结束时间</DIV></TD>
+    <TD>卸载结束时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>成功/总数</DIV></TD>
+    <TD>
+      <DIV>卸载作业的成功数量、总量</DIV></TD></TR></TBODY></TABLE></P>
+<H1>2.5 应用发布</H1>
+<H2>
+<HR>
+</H2>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3781.png"></P>
+<P>&nbsp;</P>
+<H2>操作.发布请求</H2>
+<DIV>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>请求单号</DIV></TD>
+    <TD>发布请求单号</TD></TR>
+  <TR>
+    <TD>
+      <DIV>状态</DIV></TD>
+    <TD>发布请求的可用状态</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>名称</DIV></DIV></TD>
+    <TD>发布请求的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>应用系统</DIV></TD>
+    <TD>关联的应用系统</TD></TR>
+  <TR>
+    <TD>
+      <DIV>版本</DIV></TD>
+    <TD>关联的应用程序版本</TD></TR>
+  <TR>
+    <TD>
+      <DIV>步骤数</DIV></TD>
+    <TD>涉及的步骤数</TD></TR>
+  <TR>
+    <TD>
+      <DIV>描述</DIV></TD>
+    <TD>
+      <DIV>发布请求的描述</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>
+      <DIV>发布请求的创建人</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>
+      <DIV>发布请求的创建时间</DIV></TD></TR></TBODY></TABLE></DIV>
+<DIV>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>创建</DIV></TD>
+    <TD>创建一个新的发布请求</TD></TR>
+  <TR>
+    <TD>
+      <DIV>删除</DIV></TD>
+    <TD>删除一个选中的发布请求</TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行</DIV></TD>
+    <TD>
+      <DIV>创建一个发布作业</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>修改</DIV></TD>
+    <TD>
+      <DIV>修改发布请求</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>提交</DIV></TD>
+    <TD>
+      <DIV>创建发布请求申请单，选择审批人员</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>导出模板</DIV></TD>
+    <TD>
+      <DIV>导出发布请求模板</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>生成模板</DIV></TD>
+    <TD>
+      <DIV>生成发布请求为系统内的模板</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>请求更新</DIV></DIV></TD>
+    <TD>当发布请求关联的脚本、Agent ID发生变化时更新到发布请求</TD></TR></TBODY></TABLE></DIV>
+<H2>操作.发布作业管理</H2>
+<DIV>
+<DIV>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>发布编号</DIV></TD>
+    <TD>发布作业编号</TD></TR>
+  <TR>
+    <TD>
+      <DIV>状态</DIV></TD>
+    <TD>发布作业的执行状态</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>名称</DIV></DIV></TD>
+    <TD>发布作业的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>应用系统</DIV></TD>
+    <TD>关联的应用系统名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>版本</DIV></TD>
+    <TD>关联的应用程序版本</TD></TR>
+  <TR>
+    <TD>
+      <DIV>步骤数</DIV></TD>
+    <TD>涉及的步骤数</TD></TR>
+  <TR>
+    <TD>
+      <DIV>描述</DIV></TD>
+    <TD>
+      <DIV>发布作业的描述</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>
+      <DIV>发布作业的创建人</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>创建时间</DIV></DIV></TD>
+    <TD>
+      <DIV>发布作业的创建时间</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>开始时间</DIV></TD>
+    <TD>
+      <DIV>发布作业的开始时间</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>结束时间</DIV></TD>
+    <TD>
+      <DIV>发布作业的完成时间</DIV></TD></TR></TBODY></TABLE></DIV>
+<DIV>&nbsp;</DIV></DIV>
+<H2>定义.组件管理</H2>
+<DIV>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>自定义流程</DIV>
+      <DIV>服务节点名</DIV></TD>
+    <TD>组件名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>类型</DIV></TD>
+    <TD>
+      <P>包括如下类型：</P>
+      <UL>
+        <LI>脚本 
+        <LI>系统服务 
+        <LI>网络服务</LI></UL></TD></TR>
+  <TR>
+    <TD>
+      <DIV>状态</DIV></TD>
+    <TD>启用状态</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>组件创建人</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>组件创建时间</TD></TR></TBODY></TABLE></DIV>
+<DIV>&nbsp;</DIV>
+<H2>定义.模板管理</H2>
+<DIV>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>模版编号</DIV></TD>
+    <TD>模板编号</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>名称</DIV></DIV></TD>
+    <TD>模板名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>模版来源</DIV></TD>
+    <TD>
+      <P>包括：</P>
+      <UL>
+        <LI>外部导入 
+        <LI>用户生成</LI></UL></TD></TR>
+  <TR>
+    <TD>
+      <DIV>应用系统</DIV></TD>
+    <TD>适用的应用系统</TD></TR>
+  <TR>
+    <TD>
+      <DIV>步骤数</DIV></TD>
+    <TD>包含的活动数</TD></TR>
+  <TR>
+    <TD>
+      <DIV>描述</DIV></TD>
+    <TD>
+      <DIV>模板描述</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>
+      <DIV>模板创建人</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>
+      <DIV>模板的创建时间</DIV></TD></TR></TBODY></TABLE></DIV>
+<DIV>&nbsp;</DIV>
+<H2>定义.版本管理</H2>
+<DIV>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>版本号</DIV></TD>
+    <TD>应用程序的版本</TD></TR>
+  <TR>
+    <TD>
+      <DIV>应用系统</DIV></TD>
+    <TD>关联的应用系统</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>文件数</DIV></DIV></TD>
+    <TD>包含的文件数，压缩包视为1个文件</TD></TR>
+  <TR>
+    <TD>
+      <DIV>状态</DIV></TD>
+    <TD>提交状态</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>版本创建人</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>创建的时间</TD></TR></TBODY></TABLE></DIV>
+<H2>汇总.发布历史</H2>
+<DIV>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>发布编号</DIV></TD>
+    <TD>发布作业编号</TD></TR>
+  <TR>
+    <TD>
+      <DIV>状态</DIV></TD>
+    <TD>发布作业的执行状态</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>名称</DIV></DIV></TD>
+    <TD>发布作业的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>应用系统</DIV></TD>
+    <TD>关联的应用系统名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>版本</DIV></TD>
+    <TD>关联的应用程序版本</TD></TR>
+  <TR>
+    <TD>
+      <DIV>步骤数</DIV></TD>
+    <TD>涉及的步骤数</TD></TR>
+  <TR>
+    <TD>
+      <DIV>描述</DIV></TD>
+    <TD>
+      <DIV>发布作业的描述</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>
+      <DIV>发布作业的创建人</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>创建时间</DIV></DIV></TD>
+    <TD>
+      <DIV>发布作业的创建时间</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>开始时间</DIV></TD>
+    <TD>
+      <DIV>发布作业的开始时间</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>结束时间</DIV></TD>
+    <TD>
+      <DIV>发布作业的完成时间</DIV></TD></TR></TBODY></TABLE></DIV>
+<DIV>&nbsp;</DIV>
+<H2>应用发布示例</H2>
+<DIV>&nbsp;</DIV>
+<DIV>以下使用一个简单的示例来说明应用发布功能的使用。</DIV>
+<DIV>下面是一个应用程序，仅有cron驱动的脚本组成，当前的版本为1.0.0，现在我们需要将其升级至1.0.1版本，升级方式为直接下发替换rhel-monitor.sh文件。</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>[root@opsif rhel-monitor]# pwd<BR>/rhel-monitor<BR>[root@opsif 
+rhel-monitor]# crontab -l |grep rhel-monitor.sh<BR>*/1 * * * * sh 
+/rhel-monitor/rhel-monitor.sh &gt;&gt;/rhel-monitor/rhel-monitor.log 
+2&gt;&amp;1<BR>[root@opsif rhel-monitor]# cat rhel-monitor.sh |grep 
+version<BR>version=1.0.0<BR>[root@opsif rhel-monitor]#</DIV>
+<DIV>
+<P>&nbsp;</P>
+<DIV>安装该程序的主机构成一个应用系统，我们称为OPSIF系统。</DIV>
+<DIV>1. 创建应用系统OPSIF</DIV>
+<DIV>在 <A 
+href="ca://article/?Book={F51B09E5-AABB-4658-98A6-E149F7793B38}&amp;ID=603">资源中心 
+/ 应用系统</A> 处创建。</DIV>
+<DIV>&nbsp;</DIV>
+<P>2. 创建版本</P>
+<P></P>
+<P>在【版本管理】菜单下创建一个版本，选择应用系统，填写待下发的介质版本号：</P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3783.png"></P>
+<P>保存后编辑并从本地上传文件rhel-monitor.sh 的1.0.1版本：</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3784.png"></P>
+<P>&nbsp;</P>
+<P><IMG border=0 
+src="images/230017b48b44205dc54d4057b3548c8d.png">如果开启了审批流程，则需要提交审批通过才可使用。</P>
+<P>&nbsp;</P>
+<P>3. 创建脚本</P>
+<DIV>在 <A 
+href="ca://article/?Book={F51B09E5-AABB-4658-98A6-E149F7793B38}&amp;ID=604">资源中心 
+/&nbsp;脚本</A> 处创建。用于查询rhel-monitor.sh 的当前版本：</DIV>
+<P><IMG border=0 
+src="images/230017b48b44205dc54d4057b3548c8d.png"></IMG> 脚本路径须选择 
+/应用发布/</P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3785.png"></P>
+<P><IMG border=0 
+src="images/230017b48b44205dc54d4057b3548c8d.png">如果开启了审批功能，则需要提交审批通过才可使用。</P>
+<P></P>
+<P>&nbsp;</P>
+<P>4.创建请求</P>
+<P>在【发布请求】菜单下创建发布请求。填写信息如下：</P>
+<P></P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3786.png"></P>
+<P>保存后进入流程编辑页面，编制如下的流程：</P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3789.png"></P>
+<P></P>
+<DIV>&nbsp;</DIV>
+<DIV>下面是流程中3个（第1个和第3个相同）流程组件的设置情况：</DIV>
+<DIV>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>活动步骤</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>用getVersion</DIV>
+      <DIV>查询版本</DIV></TD>
+    <TD>
+      <P>通过一个脚本查询应用程序的版本，应用程序更新前后各调用了一次。</P>
+      <P>grep version= /rhel-monitor/rhel-monitor.sh | awk -F= '{print $2}'</P>
+      <P><IMG border=0 hspace=0 alt="" align=baseline 
+      src="images/XXXYL3792.png"></P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>下发文件</DIV></TD>
+    <TD>
+      <P>将应用程序的新版本下发到目标路径</P>
+      <P><IMG border=0 hspace=0 alt="" align=baseline 
+      src="images/XXXYL3790.png"></P></TD></TR></TBODY></TABLE></DIV>
+<P>&nbsp;</P>
+<P>编辑完成后保存流程，点击<IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3794.png">开始执行。执行完毕后选中活动节点，点击【查看结果】，即可看到发布前后的版本变化。</P>
+<P><IMG border=0 
+src="images/230017b48b44205dc54d4057b3548c8d.png">如果开启了审批功能，则需要提交审批通过才可使用。</P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3793.png"></P>
+<P>&nbsp;</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3795.png"></P></DIV>
+<P></P>
+<H1>2.6 系统服务</H1>
+<P>
+<HR>
+
+<P></P>
+<P>系统服务包括系统服务定义和系统服务实例管理两部分，系统服务从创建到最终使用的基本过程如下：</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3779.png"></P>
+<P>其中第2个步骤，可以直接从脚本模块选择服务脚本（复制方式，与原脚本没有依赖关系），也可以在服务创建页面填写服务脚本。</P>
+<P><IMG border=0 
+src="images/230017b48b44205dc54d4057b3548c8d.png"></IMG>&nbsp;无论何种方式引入的脚本，当脚本需要修改时需均通过修改服务完成。</P>
+<H2><BR>定义.服务封装</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>服务名称</DIV></TD>
+    <TD>系统服务的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>封装类型</DIV></TD>
+    <TD>系统服务的类型</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>状态</DIV></DIV></TD>
+    <TD>系统服务的可用状态</TD></TR>
+  <TR>
+    <TD>
+      <DIV>备注</DIV></TD>
+    <TD>系统服务的备注</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>系统服务创建人</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>系统服务创建时间</TD></TR></TBODY></TABLE></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>创建</DIV></TD>
+    <TD>创建一个系统服务</TD></TR>
+  <TR>
+    <TD>
+      <DIV>删除</DIV></TD>
+    <TD>删除系统服务</TD></TR>
+  <TR>
+    <TD>
+      <DIV>停用</DIV></TD>
+    <TD>
+      <DIV>停用系统服务</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>编辑</DIV></TD>
+    <TD>
+      <DIV>编辑系统服务</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建实例</DIV></TD>
+    <TD>
+      <DIV>通过该系统服务创建一个服务实例</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>提交</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>提交系统服务进行审批</DIV></DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>创建实例</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>系统服务</DIV></TD>
+    <TD>
+      <DIV>系统服务名称</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>实例名称</DIV></TD>
+    <TD>
+      <DIV>系统服务实例名称</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>服务简介</DIV></TD>
+    <TD>
+      <DIV>系统服务简介</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>脚本名称</DIV></TD>
+    <TD>
+      <DIV>该系统服务所使用的脚本名称</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>系统类型</DIV></TD>
+    <TD>
+      <DIV>该系统服务所使用的脚本的类型</DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>执行服务器</DIV></TD>
+    <TD>
+      <DIV>选择执行该系统服务实例的主机</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行用户</DIV></TD>
+    <TD>
+      <DIV>选择可使用此系统服务实例的用户</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>保存</DIV></TD>
+    <TD>
+      <DIV>保存系统服务实例</DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>定义.实例封装</H2>
+<P>&nbsp;</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>服务名称</DIV></TD>
+    <TD>服务实例的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>状态</DIV></TD>
+    <TD>服务实例的可用状态</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>设备数量</DIV></DIV></TD>
+    <TD>服务实例涉及的主机（操作系统）数量</TD></TR>
+  <TR>
+    <TD>
+      <DIV>运行角色</DIV></TD>
+    <TD>服务实例运行运行的用户角色</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>服务实例的创建人</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>服务实例的创建时间</TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>创建</DIV></TD>
+    <TD>创建一个服务实例</TD></TR>
+  <TR>
+    <TD>
+      <DIV>删除</DIV></TD>
+    <TD>删除服务实例</TD></TR>
+  <TR>
+    <TD>
+      <DIV>停用</DIV></TD>
+    <TD>
+      <DIV>停用服务实例</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>编辑</DIV></TD>
+    <TD>
+      <DIV>编辑服务实例</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>提交</DIV></TD>
+    <TD>
+      <DIV>提交服务实例进行审批</DIV></TD></TR></TBODY></TABLE></P>
+<H2><BR>定义.封装类型</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>类型名称</DIV></TD>
+    <TD>封装类型名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>创建人</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>创建时间</DIV></DIV></TD>
+    <TD>创建时间</TD></TR></TBODY></TABLE></P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>创建</DIV></TD>
+    <TD>创建一个封装类型</TD></TR>
+  <TR>
+    <TD>
+      <DIV>编辑</DIV></TD>
+    <TD>编辑封装类型</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>删除</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>删除封装类型</DIV></DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<P></P>
+<H2>操作.服务目录</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>服务名称</DIV></TD>
+    <TD>服务实例的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>状态</DIV></TD>
+    <TD>服务实例的可用状态</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>设备数量</DIV></DIV></TD>
+    <TD>服务实例涉及的主机（操作系统）数量</TD></TR>
+  <TR>
+    <TD>
+      <DIV>运行角色</DIV></TD>
+    <TD>服务实例运行运行的用户角色</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>服务实例的创建人</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>服务实例的创建时间</TD></TR></TBODY></TABLE></P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>执行</DIV></TD>
+    <TD>执行服务实例</TD></TR></TBODY></TABLE></P>
+<H2><BR>操作.服务作业</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>服务名称</DIV></TD>
+    <TD>服务实例的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行状态</DIV></TD>
+    <TD>服务实例的执行状态</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>执行用户</DIV></DIV></TD>
+    <TD>服务实例的平台执行用户</TD></TR>
+  <TR>
+    <TD>
+      <DIV>开始时间</DIV></TD>
+    <TD>执行开始时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>结束时间</DIV></TD>
+    <TD>执行结束时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>失败/总数</DIV></TD>
+    <TD>
+      <DIV>失败/总数的主机（操作系统）数量</DIV></TD></TR></TBODY></TABLE></P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>删除</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>删除执行记录</DIV></DIV></TD></TR></TBODY></TABLE></P>
+<H2><BR>汇总.执行记录</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>服务名称</DIV></TD>
+    <TD>服务实例的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>执行状态</DIV></TD>
+    <TD>服务实例的执行状态</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>执行用户</DIV></DIV></TD>
+    <TD>服务实例的平台执行用户</TD></TR>
+  <TR>
+    <TD>
+      <DIV>开始时间</DIV></TD>
+    <TD>执行开始时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>结束时间</DIV></TD>
+    <TD>执行结束时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>失败/总数</DIV></TD>
+    <TD>
+      <DIV>失败/总数的主机（操作系统）数量</DIV></TD></TR></TBODY></TABLE></P>
+
+<H1>2.7 审计日志</H1>
+<P>
+<HR>
+
+<P></P>
+<P>&nbsp;</P>
+<H2>定义.日志设置</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>用户日志</DIV>
+      <DIV>保留时间</DIV></TD>
+    <TD>
+      <DIV>用户日志保留时间的天数</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>作业日志</DIV>
+      <DIV>保留时间</DIV></TD>
+    <TD>
+      <DIV>作业日志保留时间的天数</DIV></TD></TR></TBODY></TABLE></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>保存</DIV></DIV>
+    <TD>保存设置</TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>汇总.用户设置</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>操作时间</DIV></TD>
+    <TD>操作发起时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>操作用户</DIV></TD>
+    <TD>操作的平台用户</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>日志类型</DIV></DIV></TD>
+    <TD>日志的类型</TD></TR>
+  <TR>
+    <TD>
+      <DIV>名称</DIV></TD>
+    <TD>操作名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>日志信息</DIV></TD>
+    <TD>操作内容日志信息</TD></TR>
+  <TR>
+    <TD>
+      <DIV>结果状态</DIV></TD>
+    <TD>
+      <DIV>操作的结果</DIV></TD></TR></TBODY></TABLE></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>导出</DIV></TD>
+    <TD>
+      <DIV>导出日志</DIV></TD></TR></TBODY></TABLE></P>
+<H2>汇总.作业日志</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>设备IP地址</DIV></TD>
+    <TD>涉及的IP地址</TD></TR>
+  <TR>
+    <TD>
+      <DIV>开始时间</DIV></TD>
+    <TD>作业开始时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>结束时间</DIV></DIV></TD>
+    <TD>作业结束时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>耗时</DIV></TD>
+    <TD>作业还是</TD></TR>
+  <TR>
+    <TD>
+      <DIV>发起用户</DIV></TD>
+    <TD>作业的发起的平台用户</TD></TR>
+  <TR>
+    <TD>
+      <DIV>作业用户</DIV></TD>
+    <TD>
+      <DIV>执行作业的（操作系统）用户</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>日志类型</DIV></TD>
+    <TD>
+      <DIV>日志的类型</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>所属任务</DIV></TD>
+    <TD>所归属的任务</TD></TR>
+  <TR>
+    <TD>
+      <DIV>作业名称</DIV></TD>
+    <TD>
+      <DIV>作业的名称</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>结果状态</DIV></TD>
+    <TD>
+      <DIV>作业的结果状态</DIV></TD></TR></TBODY></TABLE></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>导出</DIV></TD>
+    <TD>
+      <DIV>导出日志</DIV></TD></TR></TBODY></TABLE></P>
+
+
+<H1>2.8 配置管理</H1>
+<P>
+<HR>
+
+<H2>基本属性设置</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>信息收集频</DIV>
+      <DIV>率设置</DIV></TD>
+    <TD>按照cron格式设置的自动维护项信息收集频率</TD></TR>
+  <TR>
+    <TD>
+      <P>信息收集对</P>
+      <P>比设置</P></TD>
+    <TD><IMG border=0 
+      src="images/230017b48b44205dc54d4057b3548c8d.png">信息收集对比设置，需要对端开放相关API，普通用户可忽略此项。</TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>信息收集项维护</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>列名</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>数据编码</DIV></TD>
+    <TD>信息收集函数名</TD></TR>
+  <TR>
+    <TD>
+      <DIV>属性名称</DIV></TD>
+    <TD>信息收集项名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>所属区域</DIV></DIV></TD>
+    <TD>在 操作系统-详情 中的展示区域</TD></TR>
+  <TR>
+    <TD>
+      <DIV>操作系统</DIV></TD>
+    <TD>适用的操作系统平台</TD></TR>
+  <TR>
+    <TD>
+      <DIV>文本显示类型</DIV></TD>
+    <TD>
+      <P>信息显示的方式</P>
+      <UL>
+        <LI>文本 - 适用单行文本 
+        <LI>区域 - 适用多行文本</LI></UL></TD></TR>
+  <TR>
+    <TD>
+      <DIV>可用标志</DIV></TD>
+    <TD>是否生效</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>信息收集项创建时间</TD></TR></TBODY></TABLE></P>
+<P></P>
+<P>&nbsp;</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作项</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>创建</DIV></TD>
+    <TD>创建信息收集项</TD></TR>
+  <TR>
+    <TD>
+      <DIV>编辑</DIV></TD>
+    <TD>编辑信息收集项</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>删除</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>删除信息收集项</DIV></DIV></TD></TR></TBODY></TABLE></P>
+
+
+<H1>2.9 个人中心</H1>
+<P>
+<HR>
+
+<P></P>
+<P>&nbsp;</P>
+<H2>1. 我的审批</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>单号</DIV></TD>
+    <TD>申请单号</TD></TR>
+  <TR>
+    <TD>
+      <DIV>审批类型</DIV></TD>
+    <TD>审批的类型，包括应用发布作业审批、系统服务实例审批、系统服务管理审批、作业审批、应用系统版本审批、请求审批、脚本审批、资源审批、资源审批等等</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>名称</DIV></DIV></TD>
+    <TD>一般为审批项目的名称，如脚本审批时为脚本的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>状态</DIV></TD>
+    <TD>当前所处的审批环节和状态，如经理审批</TD></TR>
+  <TR>
+    <TD>
+      <DIV>提交人</DIV></TD>
+    <TD>审批单的提交人</TD></TR>
+  <TR>
+    <TD>
+      <DIV>提交时间</DIV></TD>
+    <TD>审批单提交时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>已办/待办</DIV></TD>
+    <TD>已经处理的审批单/待处理的审批单</TD></TR></TBODY></TABLE></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>审批</DIV></TD>
+    <TD>
+      <UL>
+        <LI>同意 
+        <LI>拒绝 
+        <LI>填写审批意见</LI></UL></TD></TR></TBODY></TABLE></P>
+<H2>2. 我的申请</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>单号</DIV></TD>
+    <TD>申请单号</TD></TR>
+  <TR>
+    <TD>
+      <DIV>审批类型</DIV></TD>
+    <TD>审批的类型</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>名称</DIV></DIV></TD>
+    <TD>一般为审批项目的名称，如脚本审批时为脚本的名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>状态</DIV></TD>
+    <TD>当前所处的审批环节和状态，如经理审批</TD></TR>
+  <TR>
+    <TD>
+      <DIV>提交人</DIV></TD>
+    <TD>审批单的提交人</TD></TR>
+  <TR>
+    <TD>
+      <DIV>提交时间</DIV></TD>
+    <TD>审批单提交时间</TD></TR>
+  <TR>
+    <TD>
+      <DIV>已办/待办</DIV></TD>
+    <TD>已经处理的审批单/待处理的审批单</TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>3. 审批类型管理</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>审批类型名</DIV></TD>
+    <TD>自定义的审批类型名</TD></TR>
+  <TR>
+    <TD>
+      <DIV>审批类型路径</DIV></TD>
+    <TD>API调用路径</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>创建人</DIV></DIV></TD>
+    <TD>审批类型创建人</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>创建时间</TD></TR></TBODY></TABLE></P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>创建</DIV></TD>
+    <TD>创建一个审批类型</TD></TR>
+  <TR>
+    <TD>
+      <DIV>编辑</DIV></TD>
+    <TD>编辑审批类型</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>删除</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>删除审批类型</DIV></DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>4. 审批流程管理</H2>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>属性</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>审批类型</DIV></TD>
+    <TD>审批流程类型</TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>流程名称</DIV></DIV></TD>
+    <TD>审批流程名称</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建人</DIV></TD>
+    <TD>审批流程创建人</TD></TR>
+  <TR>
+    <TD>
+      <DIV>创建时间</DIV></TD>
+    <TD>审批流程创建时间</TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>操作</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>创建</DIV></TD>
+    <TD>创建一个审批流程</TD></TR>
+  <TR>
+    <TD>
+      <DIV>编辑</DIV></TD>
+    <TD>
+      <P>编辑审批流程</P>
+      <P>开启、关闭审批</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>部署</DIV></TD>
+    <TD>
+      <DIV>部署审批流程</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>查看</DIV></TD>
+    <TD>
+      <DIV>查看审批流程</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>删除</DIV></DIV></TD>
+    <TD>
+      <DIV>删除审批流程</DIV></TD></TR></TBODY></TABLE></P>
+
+
+
+
+
+
+
+
+
+
+<H1>EVO在数据中心内的用户群体划分</H1>
+<P>
+<HR>
+
+<P></P>
+<P>&nbsp;</P>
+<P>在数据中心内部，EVO的用户群体可划分三个：操作用户、定义用户和审批用户。</P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>用户</P></TH>
+    <TH>
+      <DIV>职能</DIV></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <P>操作用户</P></TD>
+    <TD>
+      <DIV>
+      <DIV>通过EVO平台来直接申请、分配、使用和管理资源和服务。</DIV>
+      <DIV>是管理决策的最终执行者和技术工具的最终使用者。在“行动上”决定了资源和服务会被怎样使用。</DIV></DIV></TD>
+    <TD>
+      <P>操作用户一般为数据中心的一线运维人员，通过EVO平台提供的各类软件工具（比如巡检）来开展其运维活动，达成运维目标。</P>
+      <P>因此从操作用户的视角来看，如果其运维操作的主要目的是分配资源，那么EVO是IaaS平台，如果其运维目标是提升已分配资源的效益，那么EVO是一个SaaS平台。</P>
+      <P>&nbsp;</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>定义用户</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>通过技术定义资源和服务在平台中应该如何被使用。包括：</DIV>
+      <DIV>（1）平台开发者；</DIV>
+      <DIV>（2）平台应用开发者。</DIV></DIV></TD>
+    <TD>
+      <DIV>定义用户一般为数据中心的运维开发人员，通过EVO平台来进行各类资源、服务的分配或实现。</DIV>
+      <DIV>特别地，从平台应用开发者的视角看，EVO是PaaS平台。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>审批用户</DIV></TD>
+    <TD>
+      <DIV>从管理维度定义资源和服务在平台中应该如何被使用。</DIV>
+      <DIV>负责对最终用户、定义用户的操作进行审批、复核。</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>审批用户是各类资源、服务功能实现、分配和使用过程中的秩序维持者。</DIV>
+      <DIV>一般由企业组织的领导或技术条线专家组成。</DIV></DIV></TD></TR></TBODY></TABLE>
+<P>&nbsp;</P>
+<P>对于大中型数据中心，EVO平台的用户由以上三大群体构成。</P>
+<P>对与小型数据中心，根据企业文化、技术能力和人员配备情况等的不同则会有不同的组合和侧重，部分组织还会选择全部或部分外包定义用户类的职能。</P>
+<P>随着DevOps文化的普及，部分组织甚至会将审批权限下放，采用“互审批”模式，在确保合规的前提下提升敏捷性。</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<H2>
+<H1>EVO（操作系统）作业服务支持的语言类型</H1></H2>
+<P>
+<HR>
+
+<P></P>
+<P>&nbsp;</P>
+<P>EVO通过模拟真实用户的CRT、CMD终端登陆行为来实现对对各类语言环境的支持。</P>
+<P>&nbsp;</P>
+<P>以一个以root用户纳管的Linux操作系统为例，Agent（广义上还包括Agentless）的行为和用户以root账户通过CRT终端登陆是基本相同的，EVO会加载相应的环境变量、获得同等的管理权限。这样做的好处是用户不必进行特殊的转换即可将管理操作转移到EVO平台之中。</P>
+<P>&nbsp;</P>
+<DIV><IMG border=0 
+src="images/230017b48b44205dc54d4057b3548c8d.png"></DIV>
+<P>和任何自动化框架一样，如果需要将交互式脚本的功能移植到自动化平台中，须首先进行非交互化改造。</P>
+<P>&nbsp;</P>
+<P>以下列出了在运维领域典型的脚本语言类型，用户可根据操作系统环境的差异选择适用的语言进行运维自动化开发：</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <P>文件后缀</P></TH>
+    <TH>
+      <DIV>语言类型</DIV></TH>
+    <TH>
+      <P>说明</P></TH></TR>
+  <TR>
+    <TD>
+      <P>.sh</P></TD>
+    <TD>
+      <DIV>Shell</DIV></TD>
+    <TD>EVO在Unix环境下默认调用的类型。根据操作系统的设置差异，最终使用的可能是Bash、Ksh等脚本类型。如果需要使用明确的脚本解释器，需要在Shebang中指定。比如#!/bin/bash。</TD></TR>
+  <TR>
+    <TD>
+      <DIV>.bash</DIV></TD>
+    <TD>
+      <DIV>Bash</DIV></TD>
+    <TD>
+      <DIV>Linux 默认</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>.ksh</DIV></TD>
+    <TD>
+      <DIV>Ksh</DIV></TD>
+    <TD>
+      <DIV>AIX 默认</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>.bat</DIV></TD>
+    <TD>
+      <DIV>Windows 批处理</DIV></TD>
+    <TD>
+      <DIV>EVO在Windows环境下默认调用的类型</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>.pl </DIV></TD>
+    <TD>
+      <DIV>Perl</DIV></TD>
+    <TD>
+      <DIV>一般情况下，Linux、AIX、HP-UX均默认具有Perl的运行环境。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>.py</DIV></TD>
+    <TD>
+      <DIV>Python</DIV></TD>
+    <TD>
+      <DIV>Linux一般具有Python运行环境。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>.rb</DIV></TD>
+    <TD>
+      <DIV>Ruby</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>.vbs</DIV></TD>
+    <TD>
+      <DIV>VBScript</DIV></TD>
+    <TD>
+      <DIV>Windows一般具有VBScript运行环境。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>.ps1</DIV></TD>
+    <TD>
+      <DIV>PowerShell</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>一般具有PowerShell运行环境，早期的Windows操作系统，如 Windows 
+  2003需要自行安装。</DIV></DIV></TD></TR></TBODY></TABLE></P>
+<P><IMG border=0 
+src="images/230017b48b44205dc54d4057b3548c8d.png"></P>
+<P>通过观察上表可以发现，EVO的作业服务对各类编程语言的支持实际上取决于操作系统所具备的语言环境。如果用户需要管理Linux、AIX、HP-UX和Windows等多种平台，那么，就需要学习各类编程语言的特性，这提高的运维开发的复杂性和难度。</P>
+<P>&nbsp;</P>
+<P>为解决这一问题，Puppet和Ansible等均构建了一套自成体系的编程语言来屏蔽系统间的差异性。但这又将自动化运维开发带入专业化的方向，需要专门的人员才能取得较好的效果。</P>
+<P>&nbsp;</P>
+<P>解决这一问题的建议是为各个系统平台安装统一的编程语言环境，比如Python。</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P></IMG>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<H1>
+<H1>附 软件部署服务-安装参数列表</H1></H1>
+<H2>
+<HR>
+</H2>
+<H2>WAS安装参数</H2>
+<P>
+<HR>
+
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>输入项</DIV></TH>
+    <TH>
+      <DIV>
+      <DIV>说明</DIV></DIV></TH>
+    <TH>默认值</TH></TR>
+  <TR>
+    <TD>
+      <DIV>VG NAME</DIV></TD>
+    <TD>
+      <DIV>vg_name</DIV></TD>
+    <TD>
+      <DIV>appvg</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>总大小(M)</DIV></TD>
+    <TD>
+      <DIV>total_size</DIV></TD>
+    <TD>
+      <DIV>5120</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>文件系统名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_websphere</DIV></TD>
+    <TD>
+      <DIV>/WebSphere</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>LV名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_websphere</DIV></TD>
+    <TD>
+      <DIV>Ulv_websphere</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>大小(M)</DIV></TD>
+    <TD>
+      <DIV>filesystem_websphere</DIV></TD>
+    <TD>
+      <DIV>5120</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>Install WAS</DIV></TD>
+    <TD>
+      <DIV>component_was</DIV></TD>
+    <TD>
+      <DIV>&lt;复选框&gt;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>Install IHS</DIV></TD>
+    <TD>
+      <DIV>component_ihs</DIV></TD>
+    <TD>
+      <DIV>&lt;复选框&gt;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>Install Plugins</DIV></TD>
+    <TD>
+      <DIV>component_plugins</DIV></TD>
+    <TD>
+      <DIV>&lt;复选框&gt;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>repository_path</DIV></TD>
+    <TD>
+      <DIV>repository_path</DIV></TD>
+    <TD>
+      <DIV>/media/software/WAS/8.0</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>imcl_path</DIV></TD>
+    <TD>
+      <DIV>imcl_path</DIV></TD>
+    <TD>
+      <DIV>/WebSphere/InstallManager/eclipse/tools/imcl</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>config_path</DIV></TD>
+    <TD>
+      <DIV>config_path</DIV></TD>
+    <TD>
+      <DIV>config</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>im_installc</DIV></TD>
+    <TD>
+      <DIV>im_installc</DIV></TD>
+    <TD>
+      <DIV>/media/software/WAS/8.0/was64bit.8000.installManager/installc</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>update_path</DIV></TD>
+    <TD>
+      <DIV>update_path</DIV></TD>
+    <TD>
+      <DIV>/install/software/WAS/was64.8004.ptf</DIV></TD></TR></TBODY></TABLE></P>
+<H2>MQ安装参数</H2>
+<P>
+<HR>
+
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>输入项</DIV></TH>
+    <TH>
+      <DIV>
+      <DIV>说明</DIV></DIV></TH>
+    <TH>默认值</TH></TR>
+  <TR>
+    <TD>
+      <DIV>VG NAME</DIV></TD>
+    <TD>
+      <DIV>vg_name</DIV></TD>
+    <TD>
+      <DIV>appvg</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>总大小(M)</DIV></TD>
+    <TD>
+      <DIV>total_size</DIV></TD>
+    <TD>
+      <DIV>1536</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>根文件系统名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_mqm</DIV></TD>
+    <TD>
+      <DIV>/var/mqm</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>LV名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_mqm</DIV></TD>
+    <TD>
+      <DIV>Ulv_mqm</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>大小(M)</DIV></TD>
+    <TD>
+      <DIV>filesystem_mqm</DIV></TD>
+    <TD>
+      <DIV>1024</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>error文件系统名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_mq_error</DIV></TD>
+    <TD>
+      <DIV>/var/mqm/errors</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>LV名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_mq_error</DIV></TD>
+    <TD>
+      <DIV>Ulv_mq_error</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>大小(M)</DIV></TD>
+    <TD>
+      <DIV>filesystem_mq_error</DIV></TD>
+    <TD>
+      <DIV>256</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>log文件系统名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_mq_log</DIV></TD>
+    <TD>
+      <DIV>/var/mqm/log</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>LV名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_mq_log</DIV></TD>
+    <TD>
+      <DIV>Ulv_mq_log</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>大小(M)</DIV></TD>
+    <TD>
+      <DIV>filesystem_mq_log</DIV></TD>
+    <TD>
+      <DIV>256</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>MQBasePath</DIV></TD>
+    <TD>
+      <DIV>mq_path</DIV></TD>
+    <TD>
+      <DIV>/media/software/MQ/7.1/mq7.0.1.3</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>MQPTFPath</DIV></TD>
+    <TD>
+      <DIV>mqptf_path</DIV></TD>
+    <TD>
+      <DIV>/media/software/MQ/7.1/7.0.1-WS-MQ-AixPPC64-FP0008</DIV></TD></TR></TBODY></TABLE></P>
+<H2>CICS安装参数</H2>
+<P>
+<HR>
+
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>输入项</DIV></TH>
+    <TH>
+      <DIV>
+      <DIV>说明</DIV></DIV></TH>
+    <TH>默认值</TH></TR>
+  <TR>
+    <TD>
+      <DIV>VG NAME</DIV></TD>
+    <TD>
+      <DIV>vg_name</DIV></TD>
+    <TD>
+      <DIV>appvg</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>总大小(M)</DIV></TD>
+    <TD>
+      <DIV>total_size</DIV></TD>
+    <TD>
+      <DIV>4096</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>region文件系统名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_cicsregion</DIV></TD>
+    <TD>
+      <DIV>/var/cics_regions</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>LV名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_cicsregion</DIV></TD>
+    <TD>
+      <DIV>Ulv_cicsregion</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>大小(M)</DIV></TD>
+    <TD>
+      <DIV>filesystem_cicsregion</DIV></TD>
+    <TD>
+      <DIV>1024</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>server文件系统名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_cicsserver</DIV></TD>
+    <TD>
+      <DIV>/var/cics_servers</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>LV名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_cicsserver</DIV></TD>
+    <TD>
+      <DIV>Ulv_cicsserver</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>大小(M)</DIV></TD>
+    <TD>
+      <DIV>filesystem_cicsserver</DIV></TD>
+    <TD>
+      <DIV>2048</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>sm文件系统名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_cicssm</DIV></TD>
+    <TD>
+      <DIV>/var/cicssm</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>LV名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_cicssm</DIV></TD>
+    <TD>
+      <DIV>Ulv_cicssm</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>大小(M)</DIV></TD>
+    <TD>
+      <DIV>filesystem_cicssm</DIV></TD>
+    <TD>
+      <DIV>1024</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>dumps文件系统名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_cicsdumps</DIV></TD>
+    <TD>
+      <DIV>/var/cicsdumps</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>LV名称</DIV></TD>
+    <TD>
+      <DIV>filesystem_cicsdumps</DIV></TD>
+    <TD>
+      <DIV>Ulv_cicsdumps</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>大小(M)</DIV></TD>
+    <TD>
+      <DIV>filesystem_cicsdumps</DIV></TD>
+    <TD>
+      <DIV>1024</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>CICSBasePath</DIV></TD>
+    <TD>
+      <DIV>cics_path</DIV></TD>
+    <TD>
+      <DIV>/media/software/CICS/7.1/TXSeries7.1-AIX</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>CICSPTFPath</DIV></TD>
+    <TD>
+      <DIV>cicsptf_path</DIV></TD>
+    <TD>
+      <DIV>/media/software/CICS/7.1/CICS7.1.0.3patch</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>CICSFIXPath</DIV></TD>
+    <TD>
+      <DIV>cicsfix_path</DIV></TD>
+    <TD>
+      <DIV>/media/software/CICS/7.1/7.1.0.3-TXSeries-AIX-IF013/TXSeriesFixInstaller.sh</DIV></TD></TR></TBODY></TABLE></P>
+<H2>CTG安装参数</H2>
+<P>
+<HR>
+
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>输入项</DIV></TH>
+    <TH>
+      <DIV>
+      <DIV>说明</DIV></DIV></TH>
+    <TH>默认值</TH></TR>
+  <TR>
+    <TD>
+      <DIV>CTG Base Path</DIV></TD>
+    <TD>
+      <DIV>ctg_path</DIV></TD>
+    <TD>
+      <DIV>/media/software/CTG/8.0/ctg8.0.0.2-AIX</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>CTG PTF Path</DIV></TD>
+    <TD>
+      <DIV>ctgptf_path</DIV></TD>
+    <TD>
+      <DIV>/media/software/CTG/8.0/8.0.0-CICSTG-AIX-FP003</DIV></TD></TR></TBODY></TABLE></P>
+<H2>GPFS安装参数</H2>
+<P>
+<HR>
+
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>输入项</DIV></TH>
+    <TH>
+      <DIV>
+      <DIV>说明</DIV></DIV></TH>
+    <TH>默认值</TH></TR>
+  <TR>
+    <TD>
+      <DIV>GPFS Base Path</DIV></TD>
+    <TD>
+      <DIV>gpfs_path</DIV></TD>
+    <TD>
+      <DIV>/media/software/GPFS/3.4/gpfs3.4</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>GPFS PTF Path</DIV></TD>
+    <TD>
+      <DIV>gpfsptf_path</DIV></TD>
+    <TD>
+      <DIV>/media/software/GPFS/3.4/GPFS-3.4.0.15-power-AIX</DIV></TD></TR></TBODY></TABLE></P>
+<H2>OpenSSH安装参数</H2>
+<P>
+<HR>
+
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>输入项</DIV></TH>
+    <TH>
+      <DIV>
+      <DIV>说明</DIV></DIV></TH>
+    <TH>默认值</TH></TR>
+  <TR>
+    <TD>
+      <DIV>OPENSSL Base Path</DIV></TD>
+    <TD>
+      <DIV>openssl_path</DIV></TD>
+    <TD>
+      <DIV>/media/software/OPENSSH/0.9.8.2400/openssl-0.9.8.2400</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>OPENSSH Base Path</DIV></TD>
+    <TD>
+      <DIV>openssh_path</DIV></TD>
+    <TD>
+      <DIV>/media/software/OPENSSH/6.0.0.6101/OpenSSH_6.0.0.6101</DIV></TD></TR></TBODY></TABLE></P>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<H1>附 软件部署服务-配置参数列表</H1>
+<H2>WAS配置参数</H2>
+<P>
+<HR>
+
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>输入项</DIV></TH>
+    <TH>
+      <DIV>默认值</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>configJVM</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>serverName</DIV></TD>
+    <TD>
+      <DIV>all</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>应用程序服务器名称。</DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>maxSize</DIV></TD>
+    <TD>
+      <DIV>3072</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>最大堆大小（MB）。</DIV>根据应用系统占用内存情况和内存大小配置。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>minSize</DIV></TD>
+    <TD>
+      <DIV>1024</DIV></TD>
+    <TD>
+      <DIV>初始堆大小（MB）。</DIV>
+      <DIV>根据应用系统占用内存情况和内存大小配置。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>verboseGC</DIV></TD>
+    <TD>
+      <DIV>true</DIV></TD>
+    <TD>
+      <DIV>垃圾回收，默认值为false</DIV>
+      <DIV><STRONG>强烈建议开启</STRONG></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>genericJvm</DIV>
+      <DIV>Arguments</DIV></TD>
+    <TD>
+      <DIV>-Xgcpolicy:gencon -Xmns256m -Xmnx768m -Djava.net.preferIPv4Stack=true 
+      -Xdisableexplicitgc</DIV></TD>
+    <TD>
+      <DIV>JVM通用参数。根据具体情况设定。</DIV>
+      <DIV>每个参数之间以空格隔开，每个参数-X或-D开头，参数前的”-”为英文减号符，减号符之后不带空格紧跟大”X”或大”D”，且这些参数之间不能有换行，是一行。</DIV>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>configWebContainer</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>serverName</DIV></TD>
+    <TD>
+      <DIV>all</DIV></TD>
+    <TD>
+      <DIV>应用程序服务器名称。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>maxSize</DIV></TD>
+    <TD>
+      <DIV>100</DIV></TD>
+    <TD>
+      <DIV>Web容器最大值，准确的说是WebContainer容器的大小。建议最大值=最小值。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>minSize</DIV></TD>
+    <TD>100</TD>
+    <TD>Web容器最小值。</TD></TR>
+  <TR>
+    <TD>
+      <DIV>configHost</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>Host</DIV></TD>
+    <TD>
+      <DIV>default_host</DIV></TD>
+    <TD>缺省虚拟主机 。</TD></TR>
+  <TR>
+    <TD>
+      <DIV>port</DIV></TD>
+    <TD>
+      <DIV>9081</DIV></TD>
+    <TD>
+      <DIV>端口。端口根据server的情况而定，从9080端口往后设定，如9081、9082等。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>hostname</DIV></TD>
+    <TD>
+      <DIV>*</DIV></TD>
+    <TD>
+      <DIV>主机名。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>modifyDump</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>serverName</DIV></TD>
+    <TD>
+      <DIV>all</DIV></TD>
+    <TD>
+      <DIV>应用程序服务器名称。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>configLog</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>serverName</DIV></TD>
+    <TD>
+      <DIV>all</DIV></TD>
+    <TD>
+      <DIV>应用程序服务器名称。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>baseHour</DIV></TD>
+    <TD>
+      <DIV>24</DIV></TD>
+    <TD>24，即每天写入。</TD></TR>
+  <TR>
+    <TD>
+      <DIV>rolloverPeriod</DIV></TD>
+    <TD>
+      <DIV>24</DIV></TD>
+    <TD>
+      <DIV>24，即每天循环。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>rolloverType</DIV></TD>
+    <TD>
+      <DIV>TIME</DIV></TD>
+    <TD>滚动类型。</TD></TR>
+  <TR>
+    <TD>rolloverSize</TD>
+    <TD>
+      <DIV>10</DIV></TD>
+    <TD>周期大小。</TD></TR>
+  <TR>
+    <TD>
+      <DIV>maxNumberOfBackupFiles</DIV></TD>
+    <TD>
+      <DIV>10</DIV></TD>
+    <TD>
+      <DIV>历史文件最大数。Maximum Number of Historical Log Files&nbsp; 
+    历史日志文件的最大数。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>configTCPChannel</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>serverName</DIV></TD>
+    <TD>
+      <DIV>all</DIV></TD>
+    <TD>
+      <DIV>应用程序服务器名称</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>maxOpenConnection</DIV></TD>
+    <TD>1500</TD>
+    <TD>
+      <DIV>最大打开连接数</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>Customized.pattern</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>script</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV><FONT color=#808080>scriptPath</FONT></DIV></TD>
+    <TD>
+      <DIV><FONT color=#808080>../scripts</FONT></DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>wasInstall</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>wasInstall</DIV></TD>
+    <TD>/WebSphere/AppServer</TD>
+    <TD>
+      <DIV>WAS安装目录</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>files</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV><FONT color=#808080>customized</FONT></DIV></TD>
+    <TD><FONT color=#808080>Customized.pattern</FONT></TD>
+    <TD>
+      <DIV><FONT color=#808080></FONT>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV><FONT color=#808080>common</FONT></DIV></TD>
+    <TD><FONT color=#808080>common.pattern</FONT></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>hosts</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>hostnames</DIV></TD>
+    <TD>
+      <DIV>A89PVIOC7,A89PVIOC8</DIV></TD>
+    <TD>
+      <DIV>主机名</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>cell</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>dmgrHost</DIV></TD>
+    <TD>
+      <DIV>A89PVIOC7</DIV></TD>
+    <TD>
+      <DIV>dmgr服务器主机名。主机名中不能有符号，例如：/ _</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>dmgrName</DIV></TD>
+    <TD>
+      <DIV>Dmgr01</DIV></TD>
+    <TD>
+      <DIV>dmgr概要文件名称</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>dmgrPort</DIV></TD>
+    <TD>
+      <DIV>8879</DIV></TD>
+    <TD>
+      <DIV>SOAP端口号</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>managedProfileHosts</DIV></TD>
+    <TD>
+      <DIV>A89PVIOC8,A89PVIOC7</DIV></TD>
+    <TD>
+      <DIV>受管节点的主机名</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>nodes</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>Node1</DIV></TD>
+    <TD>
+      <DIV>A89PVIOC701</DIV></TD>
+    <TD>
+      <DIV>节点1</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>Node2</DIV></TD>
+    <TD>
+      <DIV>A89PVIOC801</DIV></TD>
+    <TD>
+      <DIV>节点2</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>profileNames</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>Node1</DIV></TD>
+    <TD>
+      <DIV>Custom01</DIV></TD>
+    <TD>
+      <DIV>节点1自定义概要文件</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>Node2</DIV></TD>
+    <TD>
+      <DIV>Custom01</DIV></TD>
+    <TD>
+      <DIV>节点2自定义概要文件</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>configCluster</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>clusterName</DIV></TD>
+    <TD>
+      <DIV>cluster01</DIV></TD>
+    <TD>
+      <DIV>集群名称</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>member</DIV></TD>
+    <TD>
+      <DIV>A89PVIOC701(server1:server2),A89PVIOC801(server3:server4)</DIV></TD>
+    <TD>
+      <DIV>集群成员</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>configSecurity</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>userid</DIV></TD>
+    <TD>
+      <DIV>wasadmin</DIV></TD>
+    <TD>
+      <DIV>管理员用户ID。<FONT 
+      color=#ff0000>中行配置规范在设置管理安全性和创建管理员用户时，选择联合存储库</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>password</DIV></TD>
+    <TD>
+      <DIV>wasadmin</DIV></TD>
+    <TD>
+      <DIV>管理员用户密码</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>configMonitorUser</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>monitorUser</DIV></TD>
+    <TD>
+      <DIV>monitor</DIV></TD>
+    <TD>
+      <DIV>监视员用户。修改WAS控制台用户或组后，需要重启服务器才能对所做操作生效</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>monitorPassword</DIV></TD>
+    <TD>
+      <DIV>monitor</DIV></TD>
+    <TD>
+      <DIV>监视员用户密码</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>monitorGroup</DIV></TD>
+    <TD>
+      <DIV>monitorGroup</DIV></TD>
+    <TD>
+      <DIV>监视员组</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>configDeployUser</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>deployUser</DIV></TD>
+    <TD>
+      <DIV>deploy</DIV></TD>
+    <TD>
+      <DIV>部署员用户。修改WAS控制台用户或组后，需要重启服务器才能对所做操作生效</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>deployPassword</DIV></TD>
+    <TD>
+      <DIV>deploy</DIV></TD>
+    <TD>
+      <DIV>部署员用户密码</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>deployGroup</DIV></TD>
+    <TD>
+      <DIV>deployGroup</DIV></TD>
+    <TD>
+      <DIV>部署员组</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV><FONT color=#0000ff>invalidationTimeout</FONT></DIV></TD>
+    <TD>
+      <DIV><FONT color=#0000ff></FONT></DIV></TD>
+    <TD>
+      <DIV><FONT color=#0000ff>管理控制台超时时间</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV><FONT color=#0000ff>IBM_HEAPDUMPDIR</FONT></DIV></TD>
+    <TD>
+      <DIV><FONT color=#0000ff></FONT></DIV></TD>
+    <TD>
+      <DIV><FONT 
+      color=#0000ff>管理控制台超时时间。指定WAS产生heapdump/javacore/coredump的位置</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV><FONT color=#0000ff>IBM_JAVACOREDIR</FONT></DIV></TD>
+    <TD>
+      <DIV><FONT color=#0000ff></FONT></DIV></TD>
+    <TD>
+      <DIV><FONT 
+      color=#0000ff>指定WAS产生heapdump/javacore/coredump的位置。指定WAS产生heapdump/javacore/coredump的位置</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV><FONT color=#0000ff>IBM_COREDIR</FONT></DIV></TD>
+    <TD>
+      <DIV><FONT color=#0000ff></FONT></DIV></TD>
+    <TD>
+      <DIV><FONT 
+      color=#0000ff>指定WAS产生heapdump/javacore/coredump的位置。指定WAS产生heapdump/javacore/coredump的位置</FONT></DIV></TD></TR></TBODY></TABLE></P>
+<DIV></DIV>
+<P></P>
+<P></P>
+<H2>MQ配置参数</H2>
+<P>
+<HR>
+
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>输入项</DIV></TH>
+    <TH>
+      <DIV>默认值</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>集群名称</DIV></TD>
+    <TD>
+      <DIV>IBM</DIV></TD>
+    <TD>
+      <DIV>集群名称。由应用指定的集群名称</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>QMINI_PATH</DIV></TD>
+    <TD>
+      <DIV>/var/mqm/qmgrs</DIV></TD>
+    <TD>
+      <DIV>默认列管理器工作根目录。该值可由用户指定，如中行HA队列管理器的根目录是/wmq,或/MQHA</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>v_QMGR1</DIV></TD>
+    <TD>
+      <DIV>QM11 QMGR_HOSTNAME1=192.168.100.99 QMGRPORT1=1415 
+      hostname=ec_066A89P_VIOC7</DIV></TD>
+    <TD>
+      <DIV>队列管理器定义。</DIV>
+      <DIV>队列管理器名，以及与之对应的IP、端口、主机名。四个参数一行，以空格分隔</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>CCSID</DIV></TD>
+    <TD>
+      <DIV>819</DIV></TD>
+    <TD>
+      <DIV>用户字符编码集。应用819，中文1381</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>TRPTYPE</DIV></TD>
+    <TD>
+      <DIV>TCP</DIV></TD>
+    <TD>
+      <DIV>通讯协议类型。MQ支持TCP、SNA、LU62等，一般使用TCP协议</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>MAXDEPTH</DIV></TD>
+    <TD>
+      <DIV>1000000</DIV></TD>
+    <TD>
+      <DIV>队列最大深度。默认值5000</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>MAXMSGL</DIV></TD>
+    <TD>
+      <DIV>4194304</DIV></TD>
+    <TD>
+      <DIV>消息最大长度。默认值4M</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>HBINT</DIV></TD>
+    <TD>
+      <DIV>60</DIV></TD>
+    <TD>
+      <DIV>通道心跳。指没有消息传递时，系统发送数据包探测通道状态的时间间隔，默认值300秒</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>SHORTTMR</DIV></TD>
+    <TD>
+      <DIV>30</DIV></TD>
+    <TD>
+      <DIV>短连接时间间隔。指通道异常断开后，发送端会每隔一段时间尝试重新建立连接的时间间隔，默认60秒</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>SHORTRTY</DIV></TD>
+    <TD>
+      <DIV>999999999</DIV></TD>
+    <TD>
+      <DIV>短连接重试次数。同短连接时间间隔（SHORTRTY参数）一起设定，默认10次</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>LogFilePages</DIV></TD>
+    <TD>
+      <DIV>1024</DIV></TD>
+    <TD>
+      <DIV>MQ日志文件大小。默认4096，单位4K。单位4K，如设置为16384，则16384*4/1024=64(M)</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>LogPrimaryFiles</DIV></TD>
+    <TD>
+      <DIV>5</DIV></TD>
+    <TD>
+      <DIV>主日志文件个数，默认3</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>LogSecondaryFiles</DIV></TD>
+    <TD>
+      <DIV>4</DIV></TD>
+    <TD>
+      <DIV>副日志文件个数，默认2</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>DLQ</DIV></TD>
+    <TD>
+      <DIV>DLQ</DIV></TD>
+    <TD>
+      <DIV>死信队列，默认队列管理器不指定</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>DISCINT</DIV></TD>
+    <TD>
+      <DIV>0</DIV></TD>
+    <TD>
+      <DIV>通道连接断开时间间隔，表示多久没有消息传递，通道会自动断开连接，默认6000秒，既可以设置成0，表示永不断开连接，也可以设置成一个比较小的值，如100</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV><FONT color=#0000ff></FONT></DIV></TD>
+    <TD>
+      <DIV><FONT 
+      color=#0000ff>在qm.ini文件中追加以下值<BR>Channels:<BR>MaxChannels=1000<BR>MaxActiveChannels=1000<BR>TCP:<BR>KeepAlive=Yes</FONT></DIV>
+      <DIV><FONT color=#0000ff></FONT>&nbsp;</DIV>
+      <DIV><FONT 
+      color=#0000ff>表示将最大通道数改成1000，默认没有，表示100<BR>keepAlive=YES，表示使用系统的心跳及时间间隔。需同步设置系统的以下值<BR>tcp_keepidle=150<BR>tcp_keepinit=10<BR>tcp_keepintvl=10</FONT></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV><FONT color=#0000ff>backlog</FONT></DIV></TD>
+    <TD>
+      <DIV><FONT color=#0000ff></FONT>&nbsp;</DIV></TD>
+    <TD><FONT 
+      color=#0000ff>同18项配合使用，表示侦听端口支持的最大连接数，默认值0表示100，需修改成1000<BR>参考命令：alter 
+      listener (&lt;lnname&gt;) TRPTYPE(TCP) backlog(1000)</FONT></TD></TR>
+  <TR>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR></TBODY></TABLE></P>
+<H2>CICS配置参数</H2>
+<P>
+<HR>
+
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>输入项</DIV></TH>
+    <TH>
+      <DIV>默认值</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>WLM_Flag</DIV></TD>
+    <TD>
+      <DIV>true</DIV></TD>
+    <TD>
+      <DIV>是否安装WLM</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>SFS_SERVER</DIV></TD>
+    <TD>
+      <DIV>SFS_01</DIV></TD>
+    <TD>
+      <DIV>结构文件服务器，cics资源管理。cicscp -v create sfs_server /.:/cics/sfs/SFS_01 
+      ShortName=SFS_01</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>ShortName</DIV></TD>
+    <TD>
+      <DIV>SFS_01</DIV></TD>
+    <TD>
+      <DIV>结构文件服务器短名称，创建sfs时指定的结构文件服务器短名称。cicscp -v create sfs_server 
+      /.:/cics/sfs/SFS_01 ShortName=SFS_01</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>VG</DIV></TD>
+    <TD>
+      <DIV>appvg</DIV></TD>
+    <TD>
+      <DIV>卷组</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>REGION1</DIV></TD>
+    <TD>
+      <DIV>COR1 SFS_01 192.168.100.99 19000 LD01 tcpcor1 TCP 
+      ec_066A89P_VIOC7</DIV></TD>
+    <TD>
+      <DIV>区域，cics工作的区域。cicscp create region &lt;region_name&gt;</DIV>
+      <DIV>region名不要超过8个字符</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>WLM1</DIV></TD>
+    <TD>
+      <DIV>ec_066A89P_VIOC7 192.168.100.99</DIV></TD>
+    <TD>
+      <DIV>工作负载管理器，将任务分发到多个region中</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>COR1</DIV></TD>
+    <TD>
+      <DIV>COR1 ec_066A89P_VIOC7 192.168.100.99 LD01 tcpcor1</DIV></TD>
+    <TD>
+      <DIV>客户端区域，client所属的region</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>AOR1</DIV></TD>
+    <TD>
+      <DIV>AOR1 ec_066A89P_VIOC8 192.168.100.100 19000 LD01 tcpaor1 
+TOA1</DIV></TD>
+    <TD>
+      <DIV>应用区域，application所属的region</DIV></TD></TR></TBODY></TABLE></P>
+<H2>CTG配置参数</H2>
+<P>
+<HR>
+
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>输入项</DIV></TH>
+    <TH>
+      <DIV>默认值</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>RegionName</DIV></TD>
+    <TD>
+      <DIV>AOR1</DIV></TD>
+    <TD>
+      <DIV>region名称，指定region的名。/cicstg.ini中SECTION SERVER 
+    指定要连接的region的名字</DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>Host IP</DIV></TD>
+    <TD>
+      <DIV>192.168.100.99</DIV></TD>
+    <TD>主机IP，指定要连接的region的ip。/cicstg.ini中NETNAME指定要连接的region的ip</TD></TR>
+  <TR>
+    <TD>
+      <DIV>Port</DIV></TD>
+    <TD>
+      <DIV>19006</DIV></TD>
+    <TD>端口，要连接的region的LD定义中的帧听端口号。/cicstg.ini中PORT指定要连接的region中的LD定义的帧听的端口号。</TD></TR>
+  <TR>
+    <TD>
+      <DIV>Alias</DIV></TD>
+    <TD>
+      <DIV>tcpaor1</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD></TR></TBODY></TABLE></P>
+<H2>GPFS配置参数</H2>
+<P>
+<HR>
+
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>输入项</DIV></TH>
+    <TH>
+      <DIV>默认值</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>集群名称</DIV></TD>
+    <TD>
+      <DIV>peixun</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>仲裁盘</DIV></TD>
+    <TD>
+      <DIV>archnsd1</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>文件系统</DIV></TD>
+    <TD>
+      <DIV>/arch</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>逻辑卷</DIV></TD>
+    <TD>
+      <DIV>Ulv_arch</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>主机列表</DIV></TD>
+    <TD>
+      <DIV>ec_066A89P_VIOC10:ec_066A89P_VIOC8</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>磁盘列表</DIV></TD>
+    <TD>
+      <DIV>hdisk3:archnsd1</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>autoload</DIV></TD>
+    <TD>
+      <DIV>yes</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>pagepool</DIV></TD>
+    <TD>
+      <DIV>256m</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>maxMBpS</DIV></TD>
+    <TD>
+      <DIV>800</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>prefetchThreads</DIV></TD>
+    <TD>
+      <DIV>240</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>worker1Threads</DIV></TD>
+    <TD>
+      <DIV>128</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>maxFilesToCache</DIV></TD>
+    <TD>
+      <DIV>2000</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>sharedMemLimit</DIV></TD>
+    <TD>
+      <DIV>512M</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR></TBODY></TABLE></P>
+<H2>OpenSSH配置参数</H2>
+<P>
+<HR>
+
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>输入项</DIV></TH>
+    <TH>
+      <DIV>默认值</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>主机列表</DIV></TD>
+    <TD>
+      <DIV>A89PVIOC7 A89PVIOC8</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>root密码</DIV></TD>
+    <TD>
+      <DIV>root1234</DIV></TD>
+    <TD>
+      <DIV></DIV></TD></TR></TBODY></TABLE></P>
+
+
+
+
+
+
+
+
+
+
+<P></P>
+<H1>附 流程编辑器说明与分支判断实例</H1>
+<P>
+<HR>
+
+<P></P>
+<P>&nbsp;</P>
+<H2>1. 开始事件</H2>
+<P>
+<P></P>
+<P>开始事件用于流程（或子流程）的开始，形状上为一个细线圆圈，圈内图例表明开始事件的具体类型。</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=80>
+      <DIV>图标</DIV></TH>
+    <TH>
+      <DIV>使用说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/6a2b06d27b1087e5b05b00f436bac328.png"></P></TD>
+    <TD>
+      <DIV align=left>空的流程启动事件</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 hspace=0 alt="" align=baseline 
+      src="images/89fb7ed23d4df1847b5a03ceb4a0880a.png"></P></TD>
+    <TD>
+      <DIV 
+      align=left>使用一个定义好的消息名称来启动流程实例（收到其他流程发送的消息），消息开始事件只支持顶级流程，消息开始事件不支持内嵌子流程，支持调用子流程。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=left><IMG border=0 
+      src="images/9abf962c752503ac8dcf4c120bf83b9e.png"></P></TD>
+    <TD>
+      <DIV align=left>流程部署之后会定时触发流程的启动执行，不能用于子流程</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/4ccc7f157652d7c1ca312855af7cb018.png"></P></TD>
+    <TD>
+      <DIV align=left>可以通过一个定义好的信号名称来触发当前流程实例的启动</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=left><IMG border=0 
+      src="images/XXXYL1227.png"></P></TD>
+    <TD>
+      <DIV align=left>只能用来触发一个事件子流程，不能用来启动流程</DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<H2>2. 活动</H2>
+<P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=80>
+      <DIV>图标</DIV></TH>
+    <TH>
+      <DIV>使用说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <P align=left><IMG border=0 
+      src="images/2a4bb2927bddb690267852bbef54f260.png"></P></TD>
+    <TD>
+      <DIV align=left>需要人工审批的任务节点，需要选择审批人和审批模板</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 hspace=0 alt="" align=baseline 
+      src="images/XXXYL1228.png"></P></TD>
+    <TD>
+      <DIV align=left>应用发布独有，下发文件到服务器列表的指定位置</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 hspace=0 alt="" align=baseline 
+      src="images/6efb6deefc35b5577d8495df2e0a827c.png"></P></TD>
+    <TD>
+      <DIV 
+align=left>应用发布独有，在指定的服务器执行脚本，在执行前可以设置参数</DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<H2>3. 结构模块</H2>
+<P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=80>
+      <DIV>图标</DIV></TH>
+    <TH>
+      <DIV>使用说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/63594535c629531c64cdba2d962dc224.png"></P>
+      <P align=left></IMG></IMG></P></TD>
+    <TD>
+      <DIV align=left>子流程（Sub-process）是一个包含其他节点，网关，事件等等的节点。 
+      它自己就是一个流程，同时是更大流程的一部分。 子流程是完全定义在父流程里的 （这就是为什么叫做内嵌子流程）。</DIV>
+      <DIV align=left>.子流程运行过程中抛出的事件，可以被子流程边缘定义的 边界事件捕获， 
+      这样就可以创建一个仅限于这个子流程的事件作用范围。</DIV>
+      <DIV align=left>使用子流程要考虑如下限制：</DIV>
+      <DIV align=left>子流程只能包含一个空开始事件， 不能使用其他类型的开始事件。子路程必须 至少有一个结束节点。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1229.png"></P></TD>
+    <TD>
+      <DIV align=left>
+      <DIV 
+      align=left>调用子流程。</DIV>调用当前流程定义外部的一个流程，把外部流程当做一个分支执行，默认创建并行子流程，当前流程等待子流程执行完成再继续执行</DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>4. 网关</H2>
+<P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=80>
+      <DIV>图标</DIV></TH>
+    <TH>
+      <DIV>使用说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/93d46e2a27dbd6a0689c4a5792e84441.png"></P>
+      <P align=left></IMG>&nbsp;&nbsp;</P></TD>
+    <TD>
+      <DIV align=left>
+      <DIV align=left>排他网关。</DIV>当流程执行到这个网关，所有外出顺序流都会被处理一遍。 
+      其中条件解析为true的顺序流（或者没有设置条件，概念上在顺序流上定义了一个'true'） 会被选中，让流程继续运行。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1230.png"></P></TD>
+    <TD>
+      <DIV 
+align=left>将流程分成多条分支，也可以在分支执行完成之后把多条分支汇聚到一起。</DIV></TD></TR></TBODY></TABLE></P>
+<H2></H2>
+<H2>5. 边界事件</H2>
+<P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=80>
+      <DIV>图标</DIV></TH>
+    <TH>
+      <DIV>使用说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <P align=left><IMG border=0 
+      src="images/c6b4acf474222b3c52d7abf91f65f346.png"></P>
+      <P align=left></IMG></P>
+      <P align=left></IMG></P></TD>
+    <TD>
+      <DIV align=left>
+      <DIV align=left>执行到某个节点时设置定时启动分支流程。当流程执行到绑定了边界事件的环节， 会启动一个定时器。 
+      当定时器触发时（比如，一定时间之后），环节就会中断（可以设置为中断或不中断）， 
+      如果设置为中断则中断当前流程，沿着定时边界事件的外出连线继续执行。如果设置为不中断，可以当前流程和定时事件的外出执行流程可以同时继续执行。</DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=left><IMG border=0 
+      src="images/XXXYL1231.png"></P></TD>
+    <TD>
+      <DIV align=left>
+      <DIV align=left>节点边界上的中间捕获错误事件， 它会捕获当前节点范围内抛出的错误。大多用于内嵌子流程， 
+      或调用节点，对于子流程的情况，它会为所有内部的节点创建一个作用范围。 错误是由错误结束事件抛出的。 
+      这个错误会传递给上层作用域，直到找到一个错误事件定义向匹配的边界错误事件。当捕获了错误事件时，边界任务绑定的节点就会销毁， 
+      也会销毁内部所有的执行分支 （比如，同步节点，内嵌子流程，等等）。 
+  流程执行会继续沿着边界事件的外出连线继续执行。</DIV></DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>6. 结束事件</H2>
+<P>
+<P></P>
+<P>结束事件用于流程（或子流程）的结束，形状上为一个粗线圆圈，圈内图例表明结束事件的具体类型。</P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=80>
+      <DIV>图标</DIV></TH>
+    <TH>
+      <DIV>使用说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <P align=left><IMG border=0 
+      src="images/169345e9aea16b4fb7dae28fe2941a80.png"></P>
+      <P align=left></IMG>&nbsp;&nbsp;</P></TD>
+    <TD>
+      <DIV align=left>
+      <DIV align=left>结束当前流程或分支并抛出取消事件。</DIV>
+      <DIV align=left>取消结束事件只能与BPMN事务子流程结合使用。 当到达取消结束事件时，会抛出取消事件，它必须被取消边界事件捕获。 
+      取消边界事件会取消事务，并触发补偿机制。我们现在没有用到事务子流程（被隐藏）。</DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=left><IMG border=0 
+      src="images/0c0a70bc84c677326601b5e2c3ad2eda.png"></P></TD>
+    <TD>
+      <DIV align=left>
+      <DIV align=left>结束当前流程或分支并抛出错误。</DIV>
+      <DIV align=left>流程的当前分支就会结束，并抛出一个错误，这个错误可以被对应的中间边界错误事件捕获。 
+      如果找不到匹配的边界错误事件，就会抛出一个异常。</DIV></DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=left><IMG border=0 
+      src="images/6b2dd7f9ec62cceb4b3a915ec8d108db.png"></P></TD>
+    <TD>
+      <DIV align=left>
+      <DIV 
+    align=left>空结束事件。</DIV>意味着到达事件时不会指定抛出的结果，引擎会直接结束当前执行的分支，不会做其他事情。</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=left><IMG border=0 
+      src="images/XXXYL1232.png"></P></TD>
+    <TD>
+      <DIV align=left>
+      <DIV align=left>终止当前流程。</DIV>
+      <DIV 
+  align=left>当遇到某种原因流程无法继续执行时，可以直接指向当前节点，直接终止当前的流程实例</DIV></DIV></TD></TR></TBODY></TABLE></P>
+<P>&nbsp;</P>
+<H2>7. 连接对象</H2>
+<P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=80>
+      <DIV>图标</DIV></TH>
+    <TH>
+      <DIV>使用说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1233.png"></P></TD>
+    <TD>
+      <DIV>
+      <DIV>流程执行的顺序流。</DIV>顺序流是连接两个流程节点的连线。 
+      流程执行完一个节点后，会沿着节点的所有外出顺序流继续执行。同一个节点的两个外出顺序流会创造两个单独的，并发流程分支。</DIV></TD></TR></TBODY></TABLE></P>
+<H2></H2>
+<H2>8. 顶部图标功能</H2>
+<P>
+<P></P>
+<P>
+<P></P>
+<P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=80>
+      <DIV>图标</DIV></TH>
+    <TH>
+      <DIV>含义</DIV></TH></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1234.png"></P></TD>
+    <TD>
+      <DIV align=left>保存</IMG></DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1235.png"></P></TD>
+    <TD>
+      <DIV align=left>剪切</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1236.png"></P></TD>
+    <TD>
+      <DIV align=left>复制</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1237.png"></P></TD>
+    <TD>
+      <DIV align=left>删除</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1238.png"></P></TD>
+    <TD>
+      <DIV align=left>撤销</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1239.png"></P></TD>
+    <TD>
+      <DIV align=left>放大</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1240.png"></P></TD>
+    <TD>
+      <DIV align=left>缩小</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1241.png"></P></TD>
+    <TD>
+      <DIV align=left>缩放到实际大小</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1242.png"></P></TD>
+    <TD>
+      <DIV align=left>缩放到适合大小</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1243.png"></P></TD>
+    <TD>
+      <DIV align=left>添加弯曲点到选定的顺序流</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1244.png"></P></TD>
+    <TD>
+      <DIV align=left>移除弯曲点到选定的顺序流</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1245.png"></P></TD>
+    <TD>
+      <DIV align=left>检查节点</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1246.png"></P></TD>
+    <TD>
+      <DIV align=left>单步骤测试</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1247.png"></P></TD>
+    <TD>
+      <DIV align=left>移动到子流程</DIV></TD></TR>
+  <TR>
+    <TD>
+      <P align=center><IMG border=0 
+      src="images/XXXYL1248.png"></P></TD>
+    <TD>
+      <DIV align=left>关闭当前页面</DIV></TD></TR></TBODY></TABLE></P>
+<DIV></DIV>
+<H2>9. 串行分支的实现示例</H2>
+<P></P>
+<DIV><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3501.png"></DIV>
+<DIV></DIV>
+<DIV>
+<P>步骤A-1的结果名设为res，填写在A-1的<U>结果名</U>框中。</P>
+<P>那么可在与<U>步骤A-1之后的单一网关</U>相连的连线上设置跳转条件，如图中的线1和线2。<BR>${res==1}表示当res取值为1时所选择的分支，表达式填写在线1的<U>表达式</U>框中。</P>
+<P>${res==2} 表示当res取值为2是所选择的分支，表达式填写在线2的<U>表达式</U>框中。以此类推。</P>
+<P></P></DIV>
+<DIV><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3500.png"></DIV>
+<P></P>
+<P></P>
+<P></P>
+<H2>10. 并行分支的实现示例</H2>
+<P>使用并行网关即可。</P>
+<P><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3503.png"></P>
+<DIV><IMG border=0 hspace=0 alt="" align=baseline 
+src="images/XXXYL3502.png"></DIV>
+<P></P>
+<P>&nbsp;</P>
+
+
+
+
+<H1>附 EVO内置的软件部署服务</H1>
+<P>
+<HR>
+
+<P></P>
+<P>&nbsp;</P>
+<H2>1. AIX</H2>
+<P><BR>IBM WAS - IBM WebSphere Application Server<BR>IBM MQ - IBM WebSphere 
+MQ<BR>IBM CICS - IBM TXSeries for Multiplatforms, CICS<BR>IBM CTG - IBM TXSeries 
+for Multiplatforms, CTG<BR>IBM GPFS - General Parallel File System, GPFS<BR>IBM 
+HACMP</P>
+<P>IBM MQ Patch<BR>IBM WAS Patch<BR>IBM CICS Patch</P>
+<P>OpenSSH<BR>Oracle WebLogic<BR>Oracle single<BR>Oracle RAC<BR>Oracle PSU</P>
+<H2><BR>2. Linux</H2>
+<P><BR>IBM DB2<BR>IBM WAS - IBM WebSphere Application Server<BR>IBM MQ - IBM 
+WebSphere MQ</P>
+<P>IBM MQ Patch<BR>IBM WAS Patch<BR>Oracle WebLogic<BR>Oracle single<BR>Oracle 
+RAC</P>
+<P>&nbsp;</P>
+
+
+
+
+
+
+<H1>附 EVO的运维对象的连接</H1>
+<P>
+<HR>
+</P>
+<P>&nbsp;</P>
+<TABLE border=1 width="100%">
+  <TBODY>
+  <TR>
+    <TH width=100>
+      <DIV>主类型</DIV></TH>
+    <TH>
+      <DIV>子类型</DIV></TH>
+    <TH>
+      <DIV>连接对象</DIV></TH>
+    <TH>
+      <DIV>URL示例</DIV></TH>
+    <TH>
+      <DIV>说明</DIV></TH></TR>
+  <TR>
+    <TD>
+      <DIV>JDBC</DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>JDBC_SA</DIV></DIV></TD>
+    <TD>
+      <DIV>MySQL</DIV></TD>
+    <TD>
+      <DIV>
+      <P>jdbc:mysql://IP地址:端口/数据库名?useUnicode=true&amp;characterEncoding=utf8</P></DIV></TD>
+    <TD>
+      <P>用于执行SQL类型脚本。</P>
+      <P>基于sql类型脚本创建的作业将通过该协议执行。</P></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>JDBC</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>JDBC_SA</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>Oracle</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <DIV>jdbc:oracle:thin:@IP地址:端口:数据库实例名</DIV></DIV></TD>
+    <TD>
+      <DIV>
+      <P>用于执行SQL类型脚本。</P>
+      <P>基于sql类型脚本创建的作业将通过该协议执行。</P></DIV></TD></TR>
+  <TR>
+    <TD>
+      <DIV>
+      <DIV>&nbsp;</DIV></DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD>
+      <DIV>&nbsp;</DIV></TD>
+    <TD></TD>
+    <TD></TD></TR></TBODY></TABLE>
+<P>
+<P>&nbsp;</P></P>
+<P></P>
+  
+
+        </div><!--/span-->
+      </div><!--/row-->
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="javascripts/jquery-1.8.3.min.js"></script>
+    <script src="javascripts/jquery-ui-1.9.1.custom.min.js"></script>
+    <script src="javascripts/bootstrap.js"></script>
+    <script src="javascripts/jquery.tocify.min.js"></script>
+    <script src="javascripts/prettify.js"></script>
+    <script>
+        $(function() {
+
+            var toc = $("#toc").tocify({
+              selectors: "h1,h2"
+            }).data("toc-tocify");
+
+            prettyPrint();
+            $(".optionName").popover({ trigger: "hover" });
+
+        });
+    </script>
+
+  </body>
+</html>
